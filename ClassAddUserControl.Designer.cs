@@ -1,0 +1,207 @@
+﻿namespace StudentGradingProgram
+{
+    partial class ClassUserControl
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassUserControl));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            ClassDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
+            ClassAddRadioButton = new Guna.UI2.WinForms.Guna2RadioButton();
+            ClassDeleteRadioButton = new Guna.UI2.WinForms.Guna2RadioButton();
+            ClassTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            ApproveButton = new Guna.UI2.WinForms.Guna2CircleButton();
+            ((System.ComponentModel.ISupportInitialize)ClassDataGrid).BeginInit();
+            SuspendLayout();
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 10;
+            guna2Elipse1.TargetControl = this;
+            // 
+            // ClassDataGrid
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            ClassDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            ClassDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            ClassDataGrid.ColumnHeadersHeight = 4;
+            ClassDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            ClassDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            ClassDataGrid.GridColor = Color.FromArgb(231, 229, 255);
+            ClassDataGrid.Location = new Point(3, 3);
+            ClassDataGrid.Name = "ClassDataGrid";
+            ClassDataGrid.RowHeadersVisible = false;
+            ClassDataGrid.Size = new Size(337, 207);
+            ClassDataGrid.TabIndex = 0;
+            ClassDataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            ClassDataGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            ClassDataGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            ClassDataGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            ClassDataGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            ClassDataGrid.ThemeStyle.BackColor = Color.White;
+            ClassDataGrid.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            ClassDataGrid.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            ClassDataGrid.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            ClassDataGrid.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            ClassDataGrid.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            ClassDataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            ClassDataGrid.ThemeStyle.HeaderStyle.Height = 4;
+            ClassDataGrid.ThemeStyle.ReadOnly = false;
+            ClassDataGrid.ThemeStyle.RowsStyle.BackColor = Color.White;
+            ClassDataGrid.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            ClassDataGrid.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            ClassDataGrid.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            ClassDataGrid.ThemeStyle.RowsStyle.Height = 25;
+            ClassDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            ClassDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // ClassAddRadioButton
+            // 
+            ClassAddRadioButton.AutoSize = true;
+            ClassAddRadioButton.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ClassAddRadioButton.CheckedState.BorderThickness = 0;
+            ClassAddRadioButton.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            ClassAddRadioButton.CheckedState.InnerColor = Color.White;
+            ClassAddRadioButton.CheckedState.InnerOffset = -4;
+            ClassAddRadioButton.Font = new Font("Segoe UI", 12F);
+            ClassAddRadioButton.Location = new Point(3, 232);
+            ClassAddRadioButton.Name = "ClassAddRadioButton";
+            ClassAddRadioButton.Size = new Size(91, 25);
+            ClassAddRadioButton.TabIndex = 1;
+            ClassAddRadioButton.Text = "Sınıf Ekle";
+            ClassAddRadioButton.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            ClassAddRadioButton.UncheckedState.BorderThickness = 2;
+            ClassAddRadioButton.UncheckedState.FillColor = Color.Transparent;
+            ClassAddRadioButton.UncheckedState.InnerColor = Color.Transparent;
+            ClassAddRadioButton.CheckedChanged += RadioButton_CheckedChanged;
+            // 
+            // ClassDeleteRadioButton
+            // 
+            ClassDeleteRadioButton.AutoSize = true;
+            ClassDeleteRadioButton.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ClassDeleteRadioButton.CheckedState.BorderThickness = 0;
+            ClassDeleteRadioButton.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            ClassDeleteRadioButton.CheckedState.InnerColor = Color.White;
+            ClassDeleteRadioButton.CheckedState.InnerOffset = -4;
+            ClassDeleteRadioButton.Font = new Font("Segoe UI", 12F);
+            ClassDeleteRadioButton.Location = new Point(3, 257);
+            ClassDeleteRadioButton.Name = "ClassDeleteRadioButton";
+            ClassDeleteRadioButton.Size = new Size(80, 25);
+            ClassDeleteRadioButton.TabIndex = 2;
+            ClassDeleteRadioButton.Text = "Sınıf Sil";
+            ClassDeleteRadioButton.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            ClassDeleteRadioButton.UncheckedState.BorderThickness = 2;
+            ClassDeleteRadioButton.UncheckedState.FillColor = Color.Transparent;
+            ClassDeleteRadioButton.UncheckedState.InnerColor = Color.Transparent;
+            ClassDeleteRadioButton.CheckedChanged += RadioButton_CheckedChanged;
+            // 
+            // ClassTextBox
+            // 
+            ClassTextBox.CustomizableEdges = customizableEdges2;
+            ClassTextBox.DefaultText = "";
+            ClassTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ClassTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ClassTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ClassTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ClassTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ClassTextBox.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            ClassTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ClassTextBox.Location = new Point(110, 246);
+            ClassTextBox.Name = "ClassTextBox";
+            ClassTextBox.PlaceholderText = "";
+            ClassTextBox.SelectedText = "";
+            ClassTextBox.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            ClassTextBox.Size = new Size(165, 36);
+            ClassTextBox.TabIndex = 3;
+            // 
+            // ApproveButton
+            // 
+            ApproveButton.DisabledState.BorderColor = Color.DarkGray;
+            ApproveButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            ApproveButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ApproveButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ApproveButton.FillColor = Color.Transparent;
+            ApproveButton.Font = new Font("Segoe UI", 9F);
+            ApproveButton.ForeColor = Color.White;
+            ApproveButton.Image = (Image)resources.GetObject("ApproveButton.Image");
+            ApproveButton.ImageSize = new Size(30, 30);
+            ApproveButton.Location = new Point(296, 247);
+            ApproveButton.Name = "ApproveButton";
+            ApproveButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            ApproveButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            ApproveButton.Size = new Size(35, 35);
+            ApproveButton.TabIndex = 4;
+            ApproveButton.Click += ApproveButton_Click;
+            // 
+            // ClassUserControl
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(ApproveButton);
+            Controls.Add(ClassTextBox);
+            Controls.Add(ClassDeleteRadioButton);
+            Controls.Add(ClassAddRadioButton);
+            Controls.Add(ClassDataGrid);
+            Name = "ClassUserControl";
+            Size = new Size(348, 316);
+            Load += ClassUserControl_Load;
+            ((System.ComponentModel.ISupportInitialize)ClassDataGrid).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2RadioButton ClassDeleteRadioButton;
+        private Guna.UI2.WinForms.Guna2RadioButton ClassAddRadioButton;
+        private Guna.UI2.WinForms.Guna2DataGridView ClassDataGrid;
+        private Guna.UI2.WinForms.Guna2TextBox ClassTextBox;
+        private Guna.UI2.WinForms.Guna2CircleButton ApproveButton;
+    }
+}
