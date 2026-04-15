@@ -182,8 +182,8 @@
             // 
             // MainPanel
             // 
-            MainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             MainPanel.CustomizableEdges = customizableEdges8;
+            MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(196, 0);
             MainPanel.Margin = new Padding(0);
             MainPanel.Name = "MainPanel";
@@ -263,19 +263,19 @@
             ClassContextMenu.RenderStyle.SelectionForeColor = Color.White;
             ClassContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             ClassContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            ClassContextMenu.Size = new Size(181, 70);
+            ClassContextMenu.Size = new Size(134, 48);
             // 
             // sınıfEkleToolStripMenuItem
             // 
             sınıfEkleToolStripMenuItem.Name = "sınıfEkleToolStripMenuItem";
-            sınıfEkleToolStripMenuItem.Size = new Size(180, 22);
+            sınıfEkleToolStripMenuItem.Size = new Size(133, 22);
             sınıfEkleToolStripMenuItem.Text = "Sınıf Ekle";
             sınıfEkleToolStripMenuItem.Click += sınıfEkleToolStripMenuItem_Click;
             // 
             // sınıfListeleToolStripMenuItem
             // 
             sınıfListeleToolStripMenuItem.Name = "sınıfListeleToolStripMenuItem";
-            sınıfListeleToolStripMenuItem.Size = new Size(180, 22);
+            sınıfListeleToolStripMenuItem.Size = new Size(133, 22);
             sınıfListeleToolStripMenuItem.Text = "Sınıf Listele";
             // 
             // Main

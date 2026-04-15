@@ -25,13 +25,37 @@ namespace StudentGradingProgram.DataBaseOperations
         }
 
 
-        public Guna2DataGridView ClassList()
+        public void ClassRemove(int classId)
+        {
+            using (var context = new AppDbContext())
+            {
+                var classToBeDeleted = context.Classes.Find(classId);
+                if (classToBeDeleted != null)
+                {
+                    DialogResult answer = MessageBox.Show($"{classId} ID numaralı sınıf silinecektir. Onaylıyor musunuz ?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (answer == DialogResult.Yes)
+                    {
+                        context.Classes.Remove(classToBeDeleted);
+                        context.SaveChanges();
+                        MessageBox.Show("Silme işlemi başarılı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show($"{classId} ID numaralı bir kayıt bulunamadı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            };
+        }
+
+
+        public void ClassList(Guna2DataGridView dataGrid)
         {
             using (var context = new AppDbContext())
             {
                 var classList = context.Classes.ToList();
+                dataGrid.DataSource = classList;
             }
-            return ClassList();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace StudentGradingProgram
 
         private void ClassUserControl_Load(object sender, EventArgs e)
         {
-            ClassDataGrid.DataSource = dbOperations.ClassList();
+            FillDataGrid();
         }
 
 
@@ -42,10 +42,31 @@ namespace StudentGradingProgram
 
         private void ApproveButton_Click(object sender, EventArgs e)
         {
-            if (ClassAddRadioButton.Checked == true)
+            if (!string.IsNullOrEmpty(ClassTextBox.Text))
             {
-                dbOperations.ClassAdd(ClassTextBox.Text);
+                if (ClassAddRadioButton.Checked == true)
+                {
+                    dbOperations.ClassAdd(ClassTextBox.Text);
+                }
+
+                else if (ClassDeleteRadioButton.Checked == true)
+                {
+                    dbOperations.ClassRemove(Convert.ToInt16(ClassTextBox.Text));
+                }
+                ClassTextBox.Clear();
+                FillDataGrid();
             }
+            else 
+            {
+                MessageBox.Show("Kutucuk boş geçilemez", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+        private void FillDataGrid()
+        {
+            dbOperations.ClassList(ClassDataGrid);
+            ClassDataGrid.Columns["Students"].Visible = false;
         }
     }
 }

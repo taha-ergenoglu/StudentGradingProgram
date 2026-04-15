@@ -27,12 +27,13 @@ namespace StudentGradingProgram
         {
             if (sideBarExpand)
             {
+                ExamButton.Text = "";
+                StudentButton.Text = "";
+                ClassButton.Text = "";
                 panelSideMenu.Width -= 10;
                 if (panelSideMenu.Width <= sideBarMinWidth)
                 {
-                    ExamButton.Text = "";
-                    StudentButton.Text = "";
-                    ClassButton.Text = "";
+                    
                     sideBarExpand = false;
                     sideBarTimer.Stop();
                 }
@@ -90,7 +91,7 @@ namespace StudentGradingProgram
 
         private void sınıfEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PanelControl(new ClassUserControl(), DockStyle.None);
+            PanelControl(new ClassUserControl(), DockStyle.Left);
         }
     }
 }
