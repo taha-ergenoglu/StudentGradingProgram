@@ -32,16 +32,16 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassUserControl));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassUserControl));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             ClassDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
             ClassAddRadioButton = new Guna.UI2.WinForms.Guna2RadioButton();
             ClassDeleteRadioButton = new Guna.UI2.WinForms.Guna2RadioButton();
-            ClassTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             ApproveButton = new Guna.UI2.WinForms.Guna2CircleButton();
             ClassShadowPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            ClassTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)ClassDataGrid).BeginInit();
             ClassShadowPanel.SuspendLayout();
             SuspendLayout();
@@ -151,25 +151,6 @@
             ClassDeleteRadioButton.UncheckedState.InnerColor = Color.Transparent;
             ClassDeleteRadioButton.CheckedChanged += RadioButton_CheckedChanged;
             // 
-            // ClassTextBox
-            // 
-            ClassTextBox.CustomizableEdges = customizableEdges1;
-            ClassTextBox.DefaultText = "";
-            ClassTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            ClassTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            ClassTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            ClassTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            ClassTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            ClassTextBox.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            ClassTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            ClassTextBox.Location = new Point(110, 246);
-            ClassTextBox.Name = "ClassTextBox";
-            ClassTextBox.PlaceholderText = "";
-            ClassTextBox.SelectedText = "";
-            ClassTextBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            ClassTextBox.Size = new Size(165, 36);
-            ClassTextBox.TabIndex = 3;
-            // 
             // ApproveButton
             // 
             ApproveButton.DisabledState.BorderColor = Color.DarkGray;
@@ -183,7 +164,7 @@
             ApproveButton.ImageSize = new Size(30, 30);
             ApproveButton.Location = new Point(305, 247);
             ApproveButton.Name = "ApproveButton";
-            ApproveButton.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            ApproveButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
             ApproveButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             ApproveButton.Size = new Size(35, 35);
             ApproveButton.TabIndex = 4;
@@ -192,6 +173,7 @@
             // ClassShadowPanel
             // 
             ClassShadowPanel.BackColor = Color.Transparent;
+            ClassShadowPanel.Controls.Add(ClassTextBox);
             ClassShadowPanel.Controls.Add(ApproveButton);
             ClassShadowPanel.Controls.Add(ClassDataGrid);
             ClassShadowPanel.Controls.Add(ClassAddRadioButton);
@@ -205,12 +187,32 @@
             ClassShadowPanel.Size = new Size(348, 316);
             ClassShadowPanel.TabIndex = 5;
             // 
+            // ClassTextBox
+            // 
+            ClassTextBox.BorderRadius = 5;
+            ClassTextBox.CustomizableEdges = customizableEdges2;
+            ClassTextBox.DefaultText = "";
+            ClassTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ClassTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ClassTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ClassTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ClassTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ClassTextBox.Font = new Font("Segoe UI", 9F);
+            ClassTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ClassTextBox.Location = new Point(112, 246);
+            ClassTextBox.Margin = new Padding(10);
+            ClassTextBox.Name = "ClassTextBox";
+            ClassTextBox.PlaceholderText = "";
+            ClassTextBox.SelectedText = "";
+            ClassTextBox.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            ClassTextBox.Size = new Size(166, 36);
+            ClassTextBox.TabIndex = 6;
+            // 
             // ClassUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
-            Controls.Add(ClassTextBox);
             Controls.Add(ClassShadowPanel);
             Name = "ClassUserControl";
             Size = new Size(348, 316);
@@ -225,8 +227,8 @@
         private Guna.UI2.WinForms.Guna2RadioButton ClassDeleteRadioButton;
         private Guna.UI2.WinForms.Guna2RadioButton ClassAddRadioButton;
         private Guna.UI2.WinForms.Guna2DataGridView ClassDataGrid;
-        private Guna.UI2.WinForms.Guna2TextBox ClassTextBox;
         private Guna.UI2.WinForms.Guna2CircleButton ApproveButton;
         private Guna.UI2.WinForms.Guna2ShadowPanel ClassShadowPanel;
+        private Guna.UI2.WinForms.Guna2TextBox ClassTextBox;
     }
 }

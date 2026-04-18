@@ -11,6 +11,7 @@ namespace StudentGradingProgram.Model
         public int Id{ get; set; }
         public string Name{ get; set; }
         public string Surname{ get; set; }
+        public int StudentNo{ get; set; }
         public int ClassId { get; set; }
         public Class? Class { get; set; }
         public ICollection<ExamScore>? ExamScores { get; set; }
