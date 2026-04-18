@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using StudentGradingProgram.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,7 @@ namespace StudentGradingProgram
                 panelSideMenu.Width -= 10;
                 if (panelSideMenu.Width <= sideBarMinWidth)
                 {
-                    
+
                     sideBarExpand = false;
                     sideBarTimer.Stop();
                 }
@@ -92,6 +93,11 @@ namespace StudentGradingProgram
         private void sınıfEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PanelControl(new ClassUserControl(), DockStyle.Left);
+        }
+
+        private void öğrenciEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelControl(new StundetAddUserControl(), DockStyle.Left);
         }
     }
 }
