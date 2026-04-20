@@ -17,10 +17,12 @@ namespace StudentGradingProgram.UserControls.Student
         {
             InitializeComponent();
         }
+        public event EventHandler IslemBitti;
 
+        StudentEditDatabaseOperations dbOperations = new StudentEditDatabaseOperations();
+        StudentListUserControl studentListUser = new StudentListUserControl();
 
-        StudentEditDeleteDatabaseOperations dbOperations = new StudentEditDeleteDatabaseOperations();
-
+        public int StudentID { get; set; }
 
         private void LoadComboBox(int classId)
         {
@@ -31,9 +33,9 @@ namespace StudentGradingProgram.UserControls.Student
         }
 
 
-        public void StudentFind(int selectedStudentId)
+        public void StudentFind()
         {
-            var findedStudent = dbOperations.StudentFind(selectedStudentId);
+            var findedStudent = dbOperations.StudentFind(StudentID);
 
             if (findedStudent != null)
             {
@@ -46,7 +48,23 @@ namespace StudentGradingProgram.UserControls.Student
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            string newName = NameTextBox.Text;
+            string newSurname = SurnameTextBox.Text;
+            int newClassId = Convert.ToInt16(ClassComboBox.SelectedValue);
 
+            bool operationResult = dbOperations.StudentUpdate(StudentID, newName, newSurname, newClassId);
+            if (operationResult)
+            {
+                MessageBox.Show("İşlem başarılı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                IslemBitti?.Invoke(this, EventArgs.Empty);
+            }
+            else
+                MessageBox.Show("İşlem başarısız", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            IslemBitti?.Invoke(this, EventArgs.Empty);
         }
     }
 }

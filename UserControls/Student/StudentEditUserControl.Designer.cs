@@ -122,6 +122,7 @@
             CancelButton.Size = new Size(208, 44);
             CancelButton.TabIndex = 16;
             CancelButton.Text = "İptal Et";
+            CancelButton.Click += CancelButton_Click;
             // 
             // SaveButton
             // 

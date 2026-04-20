@@ -122,7 +122,24 @@ namespace StudentGradingProgram
             if (processDetail == "StudentEdit")
             {
                 StudentEditUserControl editUserControl = new StudentEditUserControl();
-                editUserControl.StudentFind(selectedStudentId);
+                editUserControl.StudentID = selectedStudentId;
+                editUserControl.StudentFind();
+                editUserControl.IslemBitti += (sender, args) =>
+                {
+                    // 1. İşi biten düzenleme panelini MainPanel'den kaldır ve bellekten sil
+                    MainPanel.Controls.Remove(editUserControl);
+                    editUserControl.Dispose();
+
+                    // 2. MainPanel'in içinde altta bekleyen Öğrenci Listesini bul ve yenile
+                    foreach (Control item in MainPanel.Controls)
+                    {
+                        if (item is StudentListUserControl listPanel)
+                        {
+                            listPanel.FillDataGrid(); // Sizin listenizi yenileyen ana metodunuz
+                            break;
+                        }
+                    }
+                };
                 PanelControl(editUserControl, DockStyle.None);
             }
         }

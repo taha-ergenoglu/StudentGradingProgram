@@ -31,6 +31,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentListUserControl));
@@ -41,12 +43,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             StudentListDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
             FilterPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            StudentSaveButton = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ClassComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -56,7 +57,6 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            StudentSaveButton = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1.SuspendLayout();
             guna2ShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)StudentListDataGrid).BeginInit();
@@ -168,6 +168,28 @@
             FilterPanel.ShadowColor = Color.Black;
             FilterPanel.Size = new Size(278, 860);
             FilterPanel.TabIndex = 0;
+            // 
+            // StudentSaveButton
+            // 
+            StudentSaveButton.BorderColor = SystemColors.WindowFrame;
+            StudentSaveButton.BorderRadius = 5;
+            StudentSaveButton.BorderThickness = 1;
+            StudentSaveButton.CustomizableEdges = customizableEdges1;
+            StudentSaveButton.DisabledState.BorderColor = Color.DarkGray;
+            StudentSaveButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            StudentSaveButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            StudentSaveButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            StudentSaveButton.FillColor = Color.Silver;
+            StudentSaveButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            StudentSaveButton.ForeColor = Color.Black;
+            StudentSaveButton.Location = new Point(14, 330);
+            StudentSaveButton.Margin = new Padding(15);
+            StudentSaveButton.Name = "StudentSaveButton";
+            StudentSaveButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            StudentSaveButton.Size = new Size(98, 34);
+            StudentSaveButton.TabIndex = 10;
+            StudentSaveButton.Text = "Filtrele";
+            StudentSaveButton.Click += FilterButton_Click;
             // 
             // guna2Panel1
             // 
@@ -310,27 +332,6 @@
             guna2HtmlLabel1.Size = new Size(149, 30);
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "Öğrenci Filtrele";
-            // 
-            // StudentSaveButton
-            // 
-            StudentSaveButton.BorderColor = SystemColors.WindowFrame;
-            StudentSaveButton.BorderRadius = 5;
-            StudentSaveButton.BorderThickness = 1;
-            StudentSaveButton.CustomizableEdges = customizableEdges1;
-            StudentSaveButton.DisabledState.BorderColor = Color.DarkGray;
-            StudentSaveButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            StudentSaveButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            StudentSaveButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            StudentSaveButton.FillColor = Color.Silver;
-            StudentSaveButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            StudentSaveButton.ForeColor = Color.Black;
-            StudentSaveButton.Location = new Point(14, 330);
-            StudentSaveButton.Margin = new Padding(15);
-            StudentSaveButton.Name = "StudentSaveButton";
-            StudentSaveButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            StudentSaveButton.Size = new Size(98, 34);
-            StudentSaveButton.TabIndex = 10;
-            StudentSaveButton.Text = "Filtrele";
             // 
             // StudentListUserControl
             // 
