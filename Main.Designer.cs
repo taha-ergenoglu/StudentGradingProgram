@@ -182,6 +182,7 @@
             // 
             // MainPanel
             // 
+            MainPanel.BackColor = SystemColors.ButtonFace;
             MainPanel.CustomizableEdges = customizableEdges8;
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(196, 0);
@@ -193,7 +194,7 @@
             // 
             // sideBarTimer
             // 
-            sideBarTimer.Interval = 10;
+            sideBarTimer.Interval = 5;
             sideBarTimer.Tick += sideBarTimer_Tick;
             // 
             // ExamContextMenu
@@ -210,6 +211,7 @@
             ExamContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             ExamContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             ExamContextMenu.Size = new Size(155, 48);
+            ExamContextMenu.UseWaitCursor = true;
             // 
             // sınavEkleToolStripMenuItem
             // 
@@ -236,20 +238,21 @@
             StudentContextMenu.RenderStyle.SelectionForeColor = Color.White;
             StudentContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             StudentContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            StudentContextMenu.Size = new Size(181, 70);
+            StudentContextMenu.Size = new Size(153, 48);
             // 
             // öğrenciEkleToolStripMenuItem
             // 
             öğrenciEkleToolStripMenuItem.Name = "öğrenciEkleToolStripMenuItem";
-            öğrenciEkleToolStripMenuItem.Size = new Size(180, 22);
+            öğrenciEkleToolStripMenuItem.Size = new Size(152, 22);
             öğrenciEkleToolStripMenuItem.Text = "Öğrenci Ekle";
             öğrenciEkleToolStripMenuItem.Click += öğrenciEkleToolStripMenuItem_Click;
             // 
             // öğrenciListeleToolStripMenuItem
             // 
             öğrenciListeleToolStripMenuItem.Name = "öğrenciListeleToolStripMenuItem";
-            öğrenciListeleToolStripMenuItem.Size = new Size(180, 22);
+            öğrenciListeleToolStripMenuItem.Size = new Size(152, 22);
             öğrenciListeleToolStripMenuItem.Text = "Öğrenci Listele";
+            öğrenciListeleToolStripMenuItem.Click += öğrenciListeleToolStripMenuItem_Click;
             // 
             // ClassContextMenu
             // 
@@ -283,6 +286,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1379, 860);
             Controls.Add(MainPanel);
             Controls.Add(panelSideMenu);

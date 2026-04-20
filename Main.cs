@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using StudentGradingProgram.UserControls;
+using StudentGradingProgram.UserControls.Student;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,7 @@ namespace StudentGradingProgram
             ShowContextMenu(StudentContextMenu, StudentButton, 2);
         }
 
+
         private void ClassButton_Click(object sender, EventArgs e)
         {
             ShowContextMenu(ClassContextMenu, ClassButton, 2);
@@ -84,20 +86,45 @@ namespace StudentGradingProgram
         public void PanelControl(UserControl control, DockStyle style)
         {
             control.Dock = style;
-            MainPanel.Controls.Clear();
+
+            if (control.Name == "StudentEditUserControl")
+                control.Location = new Point(585, 210);
+            else
+                MainPanel.Controls.Clear();
             MainPanel.Controls.Add(control);
             control.BringToFront();
 
         }
+
 
         private void sınıfEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PanelControl(new ClassUserControl(), DockStyle.Left);
         }
 
+
         private void öğrenciEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PanelControl(new StundetAddUserControl(), DockStyle.Left);
+        }
+
+
+        private void öğrenciListeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (sideBarExpand)
+                SideBarHamburgerButton_Click(sender, e);
+            PanelControl(new StudentListUserControl(), DockStyle.Fill);
+        }
+
+
+        public void ShowSelectedStudentData(int selectedStudentId,string processDetail)
+        {
+            if (processDetail == "StudentEdit")
+            {
+                StudentEditUserControl editUserControl = new StudentEditUserControl();
+                editUserControl.StudentFind(selectedStudentId);
+                PanelControl(editUserControl, DockStyle.None);
+            }
         }
     }
 }

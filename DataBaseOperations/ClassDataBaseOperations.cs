@@ -3,6 +3,7 @@ using StudentGradingProgram.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace StudentGradingProgram.DataBaseOperations
                 var newClass = new Class
                 {
                     ClassName = className
-                    
+
                 };
                 context.Classes.Add(newClass);
                 context.SaveChanges();
@@ -45,17 +46,27 @@ namespace StudentGradingProgram.DataBaseOperations
                 {
                     MessageBox.Show($"{classId} ID numaralı bir kayıt bulunamadı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            };
+            }
+            ;
         }
 
 
-        public void ClassList(Guna2DataGridView dataGrid)
+        public List<Class> ClassList()
         {
-            using (var context = new AppDbContext())
+            try
             {
-                var classList = context.Classes.ToList();
-                dataGrid.DataSource = classList;
+                using (var context = new AppDbContext())
+                {
+                    var classList = context.Classes.ToList();
+                    return classList;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+
         }
     }
 }

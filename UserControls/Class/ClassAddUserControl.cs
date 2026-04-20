@@ -56,7 +56,7 @@ namespace StudentGradingProgram
                 ClassTextBox.Clear();
                 FillDataGrid();
             }
-            else 
+            else
             {
                 MessageBox.Show("Kutucuk boş geçilemez", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -65,7 +65,8 @@ namespace StudentGradingProgram
 
         private void FillDataGrid()
         {
-            dbOperations.ClassList(ClassDataGrid);
+            var classList = dbOperations.ClassList();
+            ClassDataGrid.DataSource = classList;
             ClassDataGrid.Columns["Students"].Visible = false;
         }
     }
