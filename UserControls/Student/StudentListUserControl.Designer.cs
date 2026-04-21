@@ -32,22 +32,25 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentListUserControl));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             StudentListDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
             FilterPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            StudentSaveButton = new Guna.UI2.WinForms.Guna2Button();
+            FilterCancelButton = new Guna.UI2.WinForms.Guna2Button();
+            FilterButton = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ClassComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -57,12 +60,14 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel1.SuspendLayout();
             guna2ShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)StudentListDataGrid).BeginInit();
             FilterPanel.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
+            guna2ShadowPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // guna2ShadowPanel1
@@ -152,13 +157,7 @@
             // FilterPanel
             // 
             FilterPanel.BackColor = Color.Transparent;
-            FilterPanel.Controls.Add(StudentSaveButton);
-            FilterPanel.Controls.Add(guna2Panel1);
-            FilterPanel.Controls.Add(SurnameTextBox);
-            FilterPanel.Controls.Add(NameTextBox);
-            FilterPanel.Controls.Add(guna2HtmlLabel4);
-            FilterPanel.Controls.Add(guna2HtmlLabel3);
-            FilterPanel.Controls.Add(guna2HtmlLabel2);
+            FilterPanel.Controls.Add(guna2ShadowPanel2);
             FilterPanel.Controls.Add(guna2HtmlLabel1);
             FilterPanel.Dock = DockStyle.Left;
             FilterPanel.FillColor = Color.White;
@@ -169,27 +168,49 @@
             FilterPanel.Size = new Size(278, 860);
             FilterPanel.TabIndex = 0;
             // 
-            // StudentSaveButton
+            // FilterCancelButton
             // 
-            StudentSaveButton.BorderColor = SystemColors.WindowFrame;
-            StudentSaveButton.BorderRadius = 5;
-            StudentSaveButton.BorderThickness = 1;
-            StudentSaveButton.CustomizableEdges = customizableEdges1;
-            StudentSaveButton.DisabledState.BorderColor = Color.DarkGray;
-            StudentSaveButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            StudentSaveButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            StudentSaveButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            StudentSaveButton.FillColor = Color.Silver;
-            StudentSaveButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            StudentSaveButton.ForeColor = Color.Black;
-            StudentSaveButton.Location = new Point(14, 330);
-            StudentSaveButton.Margin = new Padding(15);
-            StudentSaveButton.Name = "StudentSaveButton";
-            StudentSaveButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            StudentSaveButton.Size = new Size(98, 34);
-            StudentSaveButton.TabIndex = 10;
-            StudentSaveButton.Text = "Filtrele";
-            StudentSaveButton.Click += FilterButton_Click;
+            FilterCancelButton.BorderRadius = 5;
+            FilterCancelButton.BorderThickness = 1;
+            FilterCancelButton.CustomizableEdges = customizableEdges1;
+            FilterCancelButton.DisabledState.BorderColor = Color.DarkGray;
+            FilterCancelButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            FilterCancelButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            FilterCancelButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            FilterCancelButton.FillColor = Color.White;
+            FilterCancelButton.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            FilterCancelButton.ForeColor = Color.Black;
+            FilterCancelButton.Image = (Image)resources.GetObject("FilterCancelButton.Image");
+            FilterCancelButton.ImageSize = new Size(18, 18);
+            FilterCancelButton.Location = new Point(133, 154);
+            FilterCancelButton.Name = "FilterCancelButton";
+            FilterCancelButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            FilterCancelButton.Size = new Size(120, 44);
+            FilterCancelButton.TabIndex = 18;
+            FilterCancelButton.Text = "Filtreyi İptal Et";
+            FilterCancelButton.Click += FilterCancelButton_Click;
+            // 
+            // FilterButton
+            // 
+            FilterButton.BorderRadius = 5;
+            FilterButton.BorderThickness = 1;
+            FilterButton.CustomizableEdges = customizableEdges3;
+            FilterButton.DisabledState.BorderColor = Color.DarkGray;
+            FilterButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            FilterButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            FilterButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            FilterButton.FillColor = Color.White;
+            FilterButton.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            FilterButton.ForeColor = Color.Black;
+            FilterButton.Image = (Image)resources.GetObject("FilterButton.Image");
+            FilterButton.Location = new Point(7, 154);
+            FilterButton.Margin = new Padding(10);
+            FilterButton.Name = "FilterButton";
+            FilterButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            FilterButton.Size = new Size(120, 44);
+            FilterButton.TabIndex = 17;
+            FilterButton.Text = "Filtrele";
+            FilterButton.Click += FilterButton_Click;
             // 
             // guna2Panel1
             // 
@@ -198,11 +219,11 @@
             guna2Panel1.BorderThickness = 1;
             guna2Panel1.Controls.Add(guna2CirclePictureBox1);
             guna2Panel1.Controls.Add(ClassComboBox);
-            guna2Panel1.CustomizableEdges = customizableEdges6;
+            guna2Panel1.CustomizableEdges = customizableEdges8;
             guna2Panel1.FillColor = Color.FromArgb(248, 249, 250);
-            guna2Panel1.Location = new Point(92, 271);
+            guna2Panel1.Location = new Point(89, 98);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2Panel1.Size = new Size(164, 41);
             guna2Panel1.TabIndex = 9;
             // 
@@ -214,7 +235,7 @@
             guna2CirclePictureBox1.Location = new Point(3, 7);
             guna2CirclePictureBox1.Margin = new Padding(0);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(25, 25);
             guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -226,7 +247,7 @@
             ClassComboBox.BackColor = Color.Transparent;
             ClassComboBox.BorderColor = Color.FromArgb(213, 218, 223);
             ClassComboBox.BorderThickness = 0;
-            ClassComboBox.CustomizableEdges = customizableEdges4;
+            ClassComboBox.CustomizableEdges = customizableEdges6;
             ClassComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             ClassComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             ClassComboBox.FillColor = Color.FromArgb(248, 249, 250);
@@ -238,14 +259,14 @@
             ClassComboBox.Location = new Point(26, 2);
             ClassComboBox.Margin = new Padding(10);
             ClassComboBox.Name = "ClassComboBox";
-            ClassComboBox.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            ClassComboBox.ShadowDecoration.CustomizableEdges = customizableEdges7;
             ClassComboBox.Size = new Size(139, 36);
             ClassComboBox.TabIndex = 7;
             // 
             // SurnameTextBox
             // 
             SurnameTextBox.BorderRadius = 5;
-            SurnameTextBox.CustomizableEdges = customizableEdges8;
+            SurnameTextBox.CustomizableEdges = customizableEdges10;
             SurnameTextBox.DefaultText = "";
             SurnameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SurnameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -256,20 +277,20 @@
             SurnameTextBox.Font = new Font("Segoe UI", 10F);
             SurnameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             SurnameTextBox.IconLeft = (Image)resources.GetObject("SurnameTextBox.IconLeft");
-            SurnameTextBox.Location = new Point(92, 231);
+            SurnameTextBox.Location = new Point(89, 58);
             SurnameTextBox.Margin = new Padding(10, 11, 10, 11);
             SurnameTextBox.Name = "SurnameTextBox";
             SurnameTextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             SurnameTextBox.PlaceholderText = "Öğrencinin Soyadı";
             SurnameTextBox.SelectedText = "";
-            SurnameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            SurnameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges11;
             SurnameTextBox.Size = new Size(164, 26);
             SurnameTextBox.TabIndex = 7;
             // 
             // NameTextBox
             // 
             NameTextBox.BorderRadius = 5;
-            NameTextBox.CustomizableEdges = customizableEdges10;
+            NameTextBox.CustomizableEdges = customizableEdges12;
             NameTextBox.DefaultText = "";
             NameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -280,13 +301,13 @@
             NameTextBox.Font = new Font("Segoe UI", 10F);
             NameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             NameTextBox.IconLeft = (Image)resources.GetObject("NameTextBox.IconLeft");
-            NameTextBox.Location = new Point(92, 190);
+            NameTextBox.Location = new Point(89, 17);
             NameTextBox.Margin = new Padding(10, 11, 10, 11);
             NameTextBox.Name = "NameTextBox";
             NameTextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             NameTextBox.PlaceholderText = "Öğrencinin Adı";
             NameTextBox.SelectedText = "";
-            NameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            NameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges13;
             NameTextBox.Size = new Size(164, 26);
             NameTextBox.TabIndex = 6;
             // 
@@ -294,7 +315,7 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            guna2HtmlLabel4.Location = new Point(14, 278);
+            guna2HtmlLabel4.Location = new Point(11, 105);
             guna2HtmlLabel4.Margin = new Padding(10);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(38, 22);
@@ -305,7 +326,7 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            guna2HtmlLabel3.Location = new Point(14, 236);
+            guna2HtmlLabel3.Location = new Point(11, 63);
             guna2HtmlLabel3.Margin = new Padding(10);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(49, 22);
@@ -316,7 +337,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            guna2HtmlLabel2.Location = new Point(14, 194);
+            guna2HtmlLabel2.Location = new Point(11, 21);
             guna2HtmlLabel2.Margin = new Padding(10);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(27, 22);
@@ -329,9 +350,29 @@
             guna2HtmlLabel1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             guna2HtmlLabel1.Location = new Point(14, 18);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(149, 30);
+            guna2HtmlLabel1.Size = new Size(144, 30);
             guna2HtmlLabel1.TabIndex = 1;
-            guna2HtmlLabel1.Text = "Öğrenci Filtrele";
+            guna2HtmlLabel1.Text = "Öğrenci Listele";
+            // 
+            // guna2ShadowPanel2
+            // 
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(FilterCancelButton);
+            guna2ShadowPanel2.Controls.Add(FilterButton);
+            guna2ShadowPanel2.Controls.Add(guna2Panel1);
+            guna2ShadowPanel2.Controls.Add(SurnameTextBox);
+            guna2ShadowPanel2.Controls.Add(NameTextBox);
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel4);
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel3);
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel2);
+            guna2ShadowPanel2.FillColor = Color.White;
+            guna2ShadowPanel2.Location = new Point(7, 260);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.Radius = 5;
+            guna2ShadowPanel2.ShadowColor = Color.Black;
+            guna2ShadowPanel2.ShadowShift = 7;
+            guna2ShadowPanel2.Size = new Size(262, 217);
+            guna2ShadowPanel2.TabIndex = 19;
             // 
             // StudentListUserControl
             // 
@@ -349,6 +390,8 @@
             FilterPanel.PerformLayout();
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
+            guna2ShadowPanel2.ResumeLayout(false);
+            guna2ShadowPanel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -367,6 +410,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox ClassComboBox;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private Guna.UI2.WinForms.Guna2DataGridView StudentListDataGrid;
-        private Guna.UI2.WinForms.Guna2Button StudentSaveButton;
+        private Guna.UI2.WinForms.Guna2Button FilterCancelButton;
+        private Guna.UI2.WinForms.Guna2Button FilterButton;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
     }
 }

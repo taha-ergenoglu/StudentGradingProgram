@@ -19,7 +19,7 @@ namespace StudentGradingProgram.UserControls.Student
             InitializeComponent();
         }
         StudentListDataBaseOperations dbOperations = new StudentListDataBaseOperations();
-
+        ClearControls clearControls = new ClearControls();
         private void LoadComboBox()
         {
             ClassComboBox.DataSource = dbOperations.ClassList();
@@ -41,7 +41,7 @@ namespace StudentGradingProgram.UserControls.Student
         {
             var studentList = dbOperations.studentList();
             StudentListDataGrid.DataSource = studentList;
-            StudentListDataGrid.Columns[4].Visible = false;
+            StudentListDataGrid.Columns["ClassId"].Visible = false;
         }
 
 
@@ -87,8 +87,16 @@ namespace StudentGradingProgram.UserControls.Student
             string name = NameTextBox.Text;
             string surname = SurnameTextBox.Text;
             string className = ClassComboBox.Text;
+            FillDataGrid();
             DataTable dt = CreateDataTable();
             StudentFilter(name, surname, className, dt);
+        }
+
+
+        private void FilterCancelButton_Click(object sender, EventArgs e)
+        {
+            clearControls.ClearControl(this.Controls);
+            FillDataGrid();
         }
 
 
@@ -97,7 +105,8 @@ namespace StudentGradingProgram.UserControls.Student
             DataTable dt = new DataTable();// dt adında bir DataTable nesnesi oşuturulur
             foreach (DataGridViewColumn col in StudentListDataGrid.Columns) //DgStundet adlı nesnenin kolonları teker teker okunur ve "col" adlı ifadeye eklenir
             {
-                dt.Columns.Add(col.Name);//dt adlı DataTable nesnesine yeni kolonlar eklenir ve "col" ifadesindeki kolonun adları kullanılır
+                if (col.Name != "DeleteButton" && col.Name != "EditButton")
+                    dt.Columns.Add(col.Name);//dt adlı DataTable nesnesine yeni kolonlar eklenir ve "col" ifadesindeki kolonun adları kullanılır
             }
             foreach (DataGridViewRow row in StudentListDataGrid.Rows)
             {
@@ -106,8 +115,8 @@ namespace StudentGradingProgram.UserControls.Student
                     DataRow dr = dt.NewRow();//dr adında bir DataRow nesnesi oluşturulur. Bu nesne dt adlı DataTable nesnesine yeni bir satır eklemek için kullanılır
                     foreach (DataGridViewColumn col in StudentListDataGrid.Columns)
                     {
-
-                        dr[col.Name] = row.Cells[col.Index].Value?.ToString();//dr[col.Name] ile dr satırının belirtilen adlı sütununa erişilir. col.index ile o klonun indexi alınır. Kolon ve satıların kesişiminde olan hücrenin içideki değer null değilse stringe çevrilir ve dr adlı DatRow nesnesinin ilgili sütununa atanır
+                        if (col.Name != "DeleteButton" && col.Name != "EditButton")
+                            dr[col.Name] = row.Cells[col.Index].Value?.ToString();//dr[col.Name] ile dr satırının belirtilen adlı sütununa erişilir. col.index ile o klonun indexi alınır. Kolon ve satıların kesişiminde olan hücrenin içideki değer null değilse stringe çevrilir ve dr adlı DatRow nesnesinin ilgili sütununa atanır
                     }
                     dt.Rows.Add(dr);
                 }
@@ -131,7 +140,7 @@ namespace StudentGradingProgram.UserControls.Student
             {
                 filters.Add($"Surname LIKE '%{Surname}%'");
             }
-            if (!string.IsNullOrEmpty(ClassName) && ClassName != "Sınıf Seçilmedi")
+            if (!string.IsNullOrEmpty(ClassName) && ClassName != "Sınıf Seçiniz...")
             {
                 filters.Add($"ClassName LIKE '%{ClassName}%'");
             }
@@ -141,5 +150,7 @@ namespace StudentGradingProgram.UserControls.Student
             dv.RowFilter = string.Join(" AND ", filters);//Yukarıdaki filter koşullarına "AND" ifadesi eklenir ve .RowFilter ile sadece belirlenen koşuldaki satırlar gösterilir
             StudentListDataGrid.DataSource = dv;//Filtrelenmiş veriler DgStudent e atanır
         }
+
+     
     }
 }
