@@ -218,6 +218,7 @@
             sınavEkleToolStripMenuItem.Name = "sınavEkleToolStripMenuItem";
             sınavEkleToolStripMenuItem.Size = new Size(154, 22);
             sınavEkleToolStripMenuItem.Text = "Sınav Ekle";
+            sınavEkleToolStripMenuItem.Click += sınavEkleToolStripMenuItem_Click;
             // 
             // sınavlarıListeleToolStripMenuItem
             // 
@@ -290,7 +291,7 @@
             ClientSize = new Size(1379, 860);
             Controls.Add(MainPanel);
             Controls.Add(panelSideMenu);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Main";
             Text = "Main";
             panelSideMenu.ResumeLayout(false);

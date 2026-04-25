@@ -22,7 +22,7 @@ namespace StudentGradingProgram.UserControls
             InitializeComponent();
         }
 
-
+        InterfaceTools interfaceTools = new InterfaceTools();
         StudentAddDatabaseOperations StudentAddDb = new StudentAddDatabaseOperations();
 
         public StudentData AllValue()
@@ -45,10 +45,7 @@ namespace StudentGradingProgram.UserControls
 
         private void StundetAddUserControl_Load(object sender, EventArgs e)
         {
-            ClassComboBox.DataSource = StudentAddDb.ClassList();//Sınıfdan donen liste ComboBox'a kaynak olarak import edilir
-            ClassComboBox.DisplayMember = "ClassName";//Ekranda görünecek olan ifadeler
-            ClassComboBox.ValueMember = "Id";//Arka planda programın kullanacağı değer
-            ClassComboBox.SelectedIndex = 0;
+            interfaceTools.LoadComboBox(ClassComboBox, () => StudentAddDb.ClassList());
         }
 
 
@@ -57,8 +54,7 @@ namespace StudentGradingProgram.UserControls
             if (AllValue() != null)
             {
                 StudentAddDb.StudenAdd(AllValue());
-                ClearControls clearControls = new ClearControls();
-                clearControls.ClearControl(this.Controls);
+                interfaceTools.ClearControl(this.Controls);
             }
         }
     }

@@ -19,48 +19,25 @@ namespace StudentGradingProgram.UserControls.Student
             InitializeComponent();
         }
         StudentListDataBaseOperations dbOperations = new StudentListDataBaseOperations();
-        ClearControls clearControls = new ClearControls();
-        private void LoadComboBox()
-        {
-            ClassComboBox.DataSource = dbOperations.ClassList();
-            ClassComboBox.DisplayMember = "ClassName";
-            ClassComboBox.ValueMember = "Id";
-            ClassComboBox.SelectedIndex = 0;
-        }
+        InterfaceTools interfaceTools = new InterfaceTools();
 
 
         private void StudentList_Load(object sender, EventArgs e)
         {
-            LoadComboBox();
-            FillDataGrid();
-            AddDataGridButton();
+            var studentList = dbOperations.studentList();
+            interfaceTools.FillDataGrid(StudentListDataGrid, () => dbOperations.studentList());
+            interfaceTools.LoadComboBox(ClassComboBox, () => dbOperations.ClassList());
+            interfaceTools.AddDataGridButton(StudentListDataGrid);
         }
+
 
 
         public void FillDataGrid()
         {
-            var studentList = dbOperations.studentList();
-            StudentListDataGrid.DataSource = studentList;
-            StudentListDataGrid.Columns["ClassId"].Visible = false;
+            StudentListDataBaseOperations dbOperations = new StudentListDataBaseOperations();
+            interfaceTools.FillDataGrid(StudentListDataGrid, () => dbOperations.studentList());
         }
 
-
-        private void AddDataGridButton()
-        {
-            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
-            btnEdit.HeaderText = "Düzenle";
-            btnEdit.Name = "EditButton";
-            btnEdit.Text = "Düzenle";
-            btnEdit.UseColumnTextForButtonValue = true;
-            StudentListDataGrid.Columns.Add(btnEdit);
-
-            DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
-            btnDelete.HeaderText = "Sil";
-            btnDelete.Name = "DeleteButton";
-            btnDelete.Text = "Sil";
-            btnDelete.UseColumnTextForButtonValue = true;
-            StudentListDataGrid.Columns.Add(btnDelete);
-        }
 
 
         private void StudentListDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,7 +54,7 @@ namespace StudentGradingProgram.UserControls.Student
             {
                 int operatiosnConfirm = dbOperations.StudentRemove(selectedStudentId);
                 if (operatiosnConfirm == 1)
-                    FillDataGrid();
+                    interfaceTools.FillDataGrid(StudentListDataGrid, () => dbOperations.studentList());
             }
         }
 
@@ -87,7 +64,7 @@ namespace StudentGradingProgram.UserControls.Student
             string name = NameTextBox.Text;
             string surname = SurnameTextBox.Text;
             string className = ClassComboBox.Text;
-            FillDataGrid();
+            interfaceTools.FillDataGrid(StudentListDataGrid, () => dbOperations.studentList());
             DataTable dt = CreateDataTable();
             StudentFilter(name, surname, className, dt);
         }
@@ -95,8 +72,8 @@ namespace StudentGradingProgram.UserControls.Student
 
         private void FilterCancelButton_Click(object sender, EventArgs e)
         {
-            clearControls.ClearControl(this.Controls);
-            FillDataGrid();
+            interfaceTools.ClearControl(this.Controls);
+            interfaceTools.FillDataGrid(StudentListDataGrid, () => dbOperations.studentList());
         }
 
 
@@ -151,6 +128,6 @@ namespace StudentGradingProgram.UserControls.Student
             StudentListDataGrid.DataSource = dv;//Filtrelenmiş veriler DgStudent e atanır
         }
 
-     
+
     }
 }
