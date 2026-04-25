@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StundetAddUserControl));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             StudentSaveButton = new Guna.UI2.WinForms.Guna2Button();
@@ -99,7 +99,8 @@
             StudentSaveButton.BorderColor = SystemColors.WindowFrame;
             StudentSaveButton.BorderRadius = 5;
             StudentSaveButton.BorderThickness = 1;
-            StudentSaveButton.CustomizableEdges = customizableEdges14;
+            StudentSaveButton.Cursor = Cursors.Hand;
+            StudentSaveButton.CustomizableEdges = customizableEdges1;
             StudentSaveButton.DisabledState.BorderColor = Color.DarkGray;
             StudentSaveButton.DisabledState.CustomBorderColor = Color.DarkGray;
             StudentSaveButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -110,7 +111,7 @@
             StudentSaveButton.Location = new Point(9, 352);
             StudentSaveButton.Margin = new Padding(15);
             StudentSaveButton.Name = "StudentSaveButton";
-            StudentSaveButton.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            StudentSaveButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             StudentSaveButton.Size = new Size(208, 41);
             StudentSaveButton.TabIndex = 9;
             StudentSaveButton.Text = "Kaydet";
@@ -123,11 +124,11 @@
             guna2Panel1.BorderThickness = 1;
             guna2Panel1.Controls.Add(guna2CirclePictureBox1);
             guna2Panel1.Controls.Add(ClassComboBox);
-            guna2Panel1.CustomizableEdges = customizableEdges19;
+            guna2Panel1.CustomizableEdges = customizableEdges6;
             guna2Panel1.FillColor = Color.FromArgb(248, 249, 250);
             guna2Panel1.Location = new Point(9, 282);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges7;
             guna2Panel1.Size = new Size(208, 41);
             guna2Panel1.TabIndex = 8;
             // 
@@ -139,7 +140,7 @@
             guna2CirclePictureBox1.Location = new Point(3, 7);
             guna2CirclePictureBox1.Margin = new Padding(0);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(25, 25);
             guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -151,7 +152,8 @@
             ClassComboBox.BackColor = Color.Transparent;
             ClassComboBox.BorderColor = Color.FromArgb(213, 218, 223);
             ClassComboBox.BorderThickness = 0;
-            ClassComboBox.CustomizableEdges = customizableEdges17;
+            ClassComboBox.Cursor = Cursors.Hand;
+            ClassComboBox.CustomizableEdges = customizableEdges4;
             ClassComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             ClassComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             ClassComboBox.FillColor = Color.FromArgb(248, 249, 250);
@@ -163,14 +165,15 @@
             ClassComboBox.Location = new Point(26, 2);
             ClassComboBox.Margin = new Padding(10);
             ClassComboBox.Name = "ClassComboBox";
-            ClassComboBox.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            ClassComboBox.ShadowDecoration.CustomizableEdges = customizableEdges5;
             ClassComboBox.Size = new Size(180, 36);
             ClassComboBox.TabIndex = 7;
             // 
             // SurnameTextBox
             // 
             SurnameTextBox.BorderRadius = 5;
-            SurnameTextBox.CustomizableEdges = customizableEdges21;
+            SurnameTextBox.Cursor = Cursors.IBeam;
+            SurnameTextBox.CustomizableEdges = customizableEdges8;
             SurnameTextBox.DefaultText = "";
             SurnameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             SurnameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -187,14 +190,15 @@
             SurnameTextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             SurnameTextBox.PlaceholderText = "Öğrencinin Soyadı";
             SurnameTextBox.SelectedText = "";
-            SurnameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            SurnameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges9;
             SurnameTextBox.Size = new Size(208, 41);
             SurnameTextBox.TabIndex = 6;
             // 
             // NameTextBox
             // 
             NameTextBox.BorderRadius = 5;
-            NameTextBox.CustomizableEdges = customizableEdges23;
+            NameTextBox.Cursor = Cursors.IBeam;
+            NameTextBox.CustomizableEdges = customizableEdges10;
             NameTextBox.DefaultText = "";
             NameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -211,7 +215,7 @@
             NameTextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             NameTextBox.PlaceholderText = "Öğrencinin Adı";
             NameTextBox.SelectedText = "";
-            NameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            NameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges11;
             NameTextBox.Size = new Size(208, 41);
             NameTextBox.TabIndex = 5;
             // 
@@ -247,13 +251,13 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges25;
+            guna2PictureBox1.CustomizableEdges = customizableEdges12;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.InitialImage = null;
             guna2PictureBox1.Location = new Point(9, 7);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges13;
             guna2PictureBox1.Size = new Size(40, 40);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 1;

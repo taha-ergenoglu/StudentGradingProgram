@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using StudentGradingProgram.UserControls;
+using StudentGradingProgram.UserControls.Exam;
 using StudentGradingProgram.UserControls.Student;
 using System;
 using System.Collections.Generic;
@@ -88,7 +89,7 @@ namespace StudentGradingProgram
             control.Dock = style;
 
             if (control.Name == "StudentEditUserControl")
-                control.Location = new Point(585, 210);
+                control.Location = new Point(585, 160);
             else
                 MainPanel.Controls.Clear();
             MainPanel.Controls.Add(control);
@@ -117,7 +118,7 @@ namespace StudentGradingProgram
         }
 
 
-        public void ShowSelectedStudentData(int selectedStudentId,string processDetail)
+        public void ShowSelectedStudentData(int selectedStudentId, string processDetail)
         {
             if (processDetail == "StudentEdit")
             {
@@ -142,6 +143,11 @@ namespace StudentGradingProgram
                 };
                 PanelControl(editUserControl, DockStyle.None);
             }
+        }
+
+        private void sınavEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelControl(new ExamAddUserControll(), DockStyle.Fill);
         }
     }
 }

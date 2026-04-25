@@ -68,6 +68,7 @@
             StudentButton.BorderColor = Color.FromArgb(73, 80, 87);
             StudentButton.BorderRadius = 8;
             StudentButton.BorderThickness = 1;
+            StudentButton.Cursor = Cursors.Hand;
             StudentButton.CustomizableEdges = customizableEdges1;
             StudentButton.DisabledState.BorderColor = Color.DarkGray;
             StudentButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -96,6 +97,7 @@
             ExamButton.BorderColor = Color.FromArgb(73, 80, 87);
             ExamButton.BorderRadius = 8;
             ExamButton.BorderThickness = 1;
+            ExamButton.Cursor = Cursors.Hand;
             ExamButton.CustomizableEdges = customizableEdges3;
             ExamButton.DisabledState.BorderColor = Color.DarkGray;
             ExamButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -142,6 +144,7 @@
             ClassButton.BorderColor = Color.FromArgb(73, 80, 87);
             ClassButton.BorderRadius = 8;
             ClassButton.BorderThickness = 1;
+            ClassButton.Cursor = Cursors.Hand;
             ClassButton.CustomizableEdges = customizableEdges5;
             ClassButton.DisabledState.BorderColor = Color.DarkGray;
             ClassButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -167,6 +170,7 @@
             // 
             SideBarHamburgerButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             SideBarHamburgerButton.CheckedState.ImageSize = new Size(64, 64);
+            SideBarHamburgerButton.Cursor = Cursors.Hand;
             SideBarHamburgerButton.HoverState.ImageSize = new Size(27, 27);
             SideBarHamburgerButton.Image = (Image)resources.GetObject("SideBarHamburgerButton.Image");
             SideBarHamburgerButton.ImageOffset = new Point(0, 0);
@@ -210,19 +214,19 @@
             ExamContextMenu.RenderStyle.SelectionForeColor = Color.White;
             ExamContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             ExamContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            ExamContextMenu.Size = new Size(155, 48);
-            ExamContextMenu.UseWaitCursor = true;
+            ExamContextMenu.Size = new Size(181, 70);
             // 
             // sınavEkleToolStripMenuItem
             // 
             sınavEkleToolStripMenuItem.Name = "sınavEkleToolStripMenuItem";
-            sınavEkleToolStripMenuItem.Size = new Size(154, 22);
+            sınavEkleToolStripMenuItem.Size = new Size(180, 22);
             sınavEkleToolStripMenuItem.Text = "Sınav Ekle";
+            sınavEkleToolStripMenuItem.Click += sınavEkleToolStripMenuItem_Click;
             // 
             // sınavlarıListeleToolStripMenuItem
             // 
             sınavlarıListeleToolStripMenuItem.Name = "sınavlarıListeleToolStripMenuItem";
-            sınavlarıListeleToolStripMenuItem.Size = new Size(154, 22);
+            sınavlarıListeleToolStripMenuItem.Size = new Size(180, 22);
             sınavlarıListeleToolStripMenuItem.Text = "Sınavları Listele";
             // 
             // StudentContextMenu
@@ -290,7 +294,7 @@
             ClientSize = new Size(1379, 860);
             Controls.Add(MainPanel);
             Controls.Add(panelSideMenu);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Main";
             Text = "Main";
             panelSideMenu.ResumeLayout(false);

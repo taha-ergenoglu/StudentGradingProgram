@@ -12,7 +12,7 @@ namespace StudentGradingProgram.DataBaseOperations
 {
     internal class StudentAddDatabaseOperations
     {
-        public void StudenAdd(StudentData studentData)
+        public bool StudenAdd(StudentData studentData)
         {
             try
             {
@@ -26,11 +26,13 @@ namespace StudentGradingProgram.DataBaseOperations
                     };
                     context.Students.Add(newStudent);
                     context.SaveChanges();
+                    return true;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
         }
 

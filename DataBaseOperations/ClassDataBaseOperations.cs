@@ -11,17 +11,27 @@ namespace StudentGradingProgram.DataBaseOperations
 {
     internal class ClassDataBaseOperations
     {
-        public void ClassAdd(string className)
+        public bool ClassAdd(string className)
         {
             using (var context = new AppDbContext())
             {
-                var newClass = new Class
+                try
                 {
-                    ClassName = className
+                    var newClass = new Class
+                    {
+                        ClassName = className
 
-                };
-                context.Classes.Add(newClass);
-                context.SaveChanges();
+                    };
+                    context.Classes.Add(newClass);
+                    context.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    return false;
+                }
+                
             }
         }
 

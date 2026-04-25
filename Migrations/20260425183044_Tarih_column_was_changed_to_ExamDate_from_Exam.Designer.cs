@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentGradingProgram.Model;
 
@@ -10,9 +11,11 @@ using StudentGradingProgram.Model;
 namespace StudentGradingProgram.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260425183044_Tarih_column_was_changed_to_ExamDate_from_Exam")]
+    partial class Tarih_column_was_changed_to_ExamDate_from_Exam
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.25");
@@ -69,9 +72,6 @@ namespace StudentGradingProgram.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal?>("Score4")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal?>("Score5")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("StudentID")

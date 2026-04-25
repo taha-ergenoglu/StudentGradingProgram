@@ -19,6 +19,7 @@ namespace StudentGradingProgram.Model
         public decimal? Score2{ get; set; }
         public decimal? Score3{ get; set; }
         public decimal? Score4{ get; set; }
-        public decimal? Score5{ get; set; }
+        public decimal? Score5 { get; set; }
+        public decimal? TotalScore { get; set; }
     }
 }

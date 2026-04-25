@@ -46,12 +46,28 @@ namespace StudentGradingProgram
             {
                 if (ClassAddRadioButton.Checked == true)
                 {
-                    dbOperations.ClassAdd(ClassTextBox.Text);
+                    bool isSuccess = dbOperations.ClassAdd(ClassTextBox.Text);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Sınıf başarıyla eklendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sınıf kaydederken hata meydana geldi.", "Başarısız", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
                 else if (ClassDeleteRadioButton.Checked == true)
                 {
-                    dbOperations.ClassRemove(Convert.ToInt16(ClassTextBox.Text));
+                    if (short.TryParse(ClassTextBox.Text, out short classId))
+                    {
+                        dbOperations.ClassRemove(classId);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen silmek için geçerli bir ID (Sayı) giriniz.", "Hatalı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Hatalıysa aşağıdaki FillDataGrid'i çalıştırmadan işlemi kes
+                    }
                 }
                 ClassTextBox.Clear();
                 FillDataGrid();
