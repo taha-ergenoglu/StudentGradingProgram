@@ -77,11 +77,11 @@ namespace StudentGradingProgram.UserControls.Exam
                 if (isItSccessfull)
                 { 
                 MessageBox.Show("Puanlar başarılı bir şekilde kaydedildi","Başarılı",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }
+        }
 
 
             
-            }
-        }
+    }
+}
     }
 }
