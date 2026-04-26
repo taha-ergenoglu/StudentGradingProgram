@@ -11,19 +11,21 @@ namespace StudentGradingProgram.Helpers
     internal class InterfaceTools
     {
 
-        public void FillDataGrid(Guna2DataGridView dataGrid,Func<object> dataPull )
+        public void FillDataGrid(Guna2DataGridView dataGrid, Func<object> dataPull)
         {
             var dataList = dataPull();
             dataGrid.DataSource = dataList;
             foreach (DataGridViewColumn col in dataGrid.Columns)
             {
-                if (col.Name == "ClassId")
-                    dataGrid.Columns["ClassId"].Visible = false;
+                if (col.Name == "Id")
+                    dataGrid.Columns["Id"].Visible = false;
+                else if (col.Name == "ClassName")
+                    dataGrid.Columns["ClassName"].HeaderText = "Class Name";
             }
         }
-        
-        
-        public void LoadComboBox(Guna2ComboBox comboBox,Func<object>dataPull)
+
+
+        public void LoadComboBox(Guna2ComboBox comboBox, Func<object> dataPull)
         {
             var dataList = dataPull();
             comboBox.DataSource = dataList;
@@ -119,6 +121,30 @@ namespace StudentGradingProgram.Helpers
                     case Guna2DateTimePicker dtp:
                         dtp.Value = DateTime.Now;
                         break;
+                }
+            }
+        }
+
+
+        public void ChangeDataGridColumnsHeader(Guna2DataGridView dataGrid, List<string> headNames)
+        {
+            int i = 4;
+            foreach (string headerName in headNames)
+            {
+
+                if (i < dataGrid.Columns.Count)
+                {
+                    dataGrid.Columns[i].HeaderText = headerName;
+                    i++;
+                }
+                else if (dataGrid.Columns.Count == 0)
+                {
+                    MessageBox.Show("Lütfen önce sınıf seçimi yapınız", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                }
+                else
+                {
+                    break;
                 }
             }
         }

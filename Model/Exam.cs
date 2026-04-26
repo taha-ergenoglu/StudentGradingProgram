@@ -12,5 +12,6 @@ namespace StudentGradingProgram.Model
         public string ExamName { get; set; }
         public DateTime ExamDate { get; set; }
         public ICollection<ExamScore> ExamScores{ get; set; }
+        public ICollection<ExamTableColumnsHeading> ExamTableColumnsHeadings { get; set; }
     }
 }

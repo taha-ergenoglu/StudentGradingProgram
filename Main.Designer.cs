@@ -88,7 +88,7 @@
             StudentButton.TabIndex = 1;
             StudentButton.Text = "Öğrenci İşlemleri";
             StudentButton.TextAlign = HorizontalAlignment.Left;
-            StudentButton.Click += StudentButton_Click;
+            StudentButton.Click += CommonContextMenu_Click;
             // 
             // ExamButton
             // 
@@ -118,7 +118,7 @@
             ExamButton.TabIndex = 0;
             ExamButton.Text = "Sınav İşlemleri";
             ExamButton.TextAlign = HorizontalAlignment.Left;
-            ExamButton.Click += ExamButton_Click;
+            ExamButton.Click += CommonContextMenu_Click;
             // 
             // panelSideMenu
             // 
@@ -164,7 +164,7 @@
             ClassButton.TabIndex = 3;
             ClassButton.Text = "Sınıf İşlemleri";
             ClassButton.TextAlign = HorizontalAlignment.Left;
-            ClassButton.Click += ClassButton_Click;
+            ClassButton.Click += CommonContextMenu_Click;
             // 
             // SideBarHamburgerButton
             // 
@@ -214,19 +214,19 @@
             ExamContextMenu.RenderStyle.SelectionForeColor = Color.White;
             ExamContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             ExamContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            ExamContextMenu.Size = new Size(181, 70);
+            ExamContextMenu.Size = new Size(155, 48);
             // 
             // sınavEkleToolStripMenuItem
             // 
             sınavEkleToolStripMenuItem.Name = "sınavEkleToolStripMenuItem";
-            sınavEkleToolStripMenuItem.Size = new Size(180, 22);
+            sınavEkleToolStripMenuItem.Size = new Size(154, 22);
             sınavEkleToolStripMenuItem.Text = "Sınav Ekle";
             sınavEkleToolStripMenuItem.Click += sınavEkleToolStripMenuItem_Click;
             // 
             // sınavlarıListeleToolStripMenuItem
             // 
             sınavlarıListeleToolStripMenuItem.Name = "sınavlarıListeleToolStripMenuItem";
-            sınavlarıListeleToolStripMenuItem.Size = new Size(180, 22);
+            sınavlarıListeleToolStripMenuItem.Size = new Size(154, 22);
             sınavlarıListeleToolStripMenuItem.Text = "Sınavları Listele";
             // 
             // StudentContextMenu

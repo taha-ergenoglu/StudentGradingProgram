@@ -14,14 +14,19 @@ using System.Windows.Forms;
 
 namespace StudentGradingProgram.UserControls.Exam
 {
-    public partial class ExamAddUserControll : UserControl
+    public partial class ExamScoreEntryUserControll : UserControl
     {
-        public ExamAddUserControll()
+        public ExamScoreEntryUserControll()
         {
             InitializeComponent();
         }
+
+
         InterfaceTools interfaceTools = new InterfaceTools();
         ExamAddDataBaseOperations dbOperations = new ExamAddDataBaseOperations();
+        List<string> columnsName = new List<string>();
+
+
         private void ExamAddUserControll_Load(object sender, EventArgs e)
         {
             interfaceTools.LoadComboBox(ClassComboBox, () => dbOperations.ClassList());
@@ -33,10 +38,8 @@ namespace StudentGradingProgram.UserControls.Exam
             {
                 var sinifOgrencileri = dbOperations.GetStudentsByClassId(selectedClassId);
 
-                // 2. Bir önceki mesajda kurduğumuz InterfaceTools ile tabloyu doldurun
                 interfaceTools.FillDataGrid(ExamDataGrid, () => sinifOgrencileri);
 
-                // 3. Puan giriş kolonlarını tabloya ekleyin
                 interfaceTools.AddSoccerColumns(ExamDataGrid);
                 ExamDataGridCellValidating validating = new ExamDataGridCellValidating(ExamDataGrid);
             }
@@ -65,7 +68,7 @@ namespace StudentGradingProgram.UserControls.Exam
                 examScore.Score4 = row.Cells["Exam4"].Value != null ? Convert.ToInt32(row.Cells["Exam4"].Value) : 0;
                 examScore.Score5 = row.Cells["Exam5"].Value != null ? Convert.ToInt32(row.Cells["Exam5"].Value) : 0;
 
-                examScore.TotalScore = formatedTotalScore*5;
+                examScore.TotalScore = formatedTotalScore * 5;
                 scoreList.Add(examScore);
             }
 
@@ -73,15 +76,41 @@ namespace StudentGradingProgram.UserControls.Exam
             {
                 string examName = ExamNameTextBox.Text;
                 DateTime examDate = ExamDateDateTimePicker.Value;
-                bool isItSccessfull=dbOperations.SaveClassScore(scoreList,examName,examDate);
+                int examId = dbOperations.SaveClassScore(scoreList, examName, examDate, columnsName);
+                bool isItSccessfull = dbOperations.SaveExamHeadings(examId, ExamDataGrid);
                 if (isItSccessfull)
-                { 
-                MessageBox.Show("Puanlar başarılı bir şekilde kaydedildi","Başarılı",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                {
+                    MessageBox.Show("Puanlar başarılı bir şekilde kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-
-            
             }
+        }
+
+        private void ChangeColumnsNameButton_Click(object sender, EventArgs e)
+        {
+            columnsName.Add(Evaluation1TextBox.Text);
+            columnsName.Add(Evaluation2TextBox.Text);
+            columnsName.Add(Evaluation3TextBox.Text);
+            columnsName.Add(Evaluation4TextBox.Text);
+            columnsName.Add(Evaluation5TextBox.Text);
+
+            interfaceTools.ChangeDataGridColumnsHeader(ExamDataGrid, columnsName);
+        }
+
+
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
+            Image mebLogo = Properties.Resources.mebLogo;
+            Image schoolLogo = Properties.Resources.SchooLogo;
+            string schoolName = "Raif Azak İmam Hatip Ortaokulu";
+            string selectedClass = ClassComboBox.Text;
+            string examName = ExamNameTextBox.Text;
+            DateTime examDate = ExamDateDateTimePicker.Value;
+            string information = "Rakamların puan karşılığı:\n1 = 20 puan\n2 = 40 puan\n3 = 60 puan\n4 = 80 puan\n5 = 100 puan";
+            // 1. Sınıfımızdan bir kopya üretiyoruz ve yazdırılacak tabloyu içine gönderiyoruz
+            DataGridViewPrinter print = new DataGridViewPrinter(ExamDataGrid, schoolName,selectedClass,examName,examDate,mebLogo,schoolLogo, information);
+
+            // 2. Önizleme ekranını başlatıyoruz
+            print.ShowPrintPreview();
         }
     }
 }

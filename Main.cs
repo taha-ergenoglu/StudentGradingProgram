@@ -19,7 +19,13 @@ namespace StudentGradingProgram
         public Main()
         {
             InitializeComponent();
+            //Butonların tag larına açmaları gereken menüler atanır
+            ExamButton.Tag = ExamContextMenu;
+            StudentButton.Tag = StudentContextMenu;
+            ClassButton.Tag = ClassContextMenu;
         }
+
+
         bool sideBarExpand = true;//Panelin açık kapalılık durumu
         int sideBarMaxWidth = 196;
         int sideBarMinWidth = 85;
@@ -61,35 +67,29 @@ namespace StudentGradingProgram
             sideBarTimer.Start();
         }
 
-        public void ShowContextMenu(Guna2ContextMenuStrip contextMenu, Guna2Button button, int locationY)
+        public void ShowContextMenu(Guna2ContextMenuStrip contextMenu, Guna2Button button)
         {
-            contextMenu.Show(button, button.Width + 10, locationY);
+            contextMenu.Show(button, button.Width + 10, 2);
         }
 
 
-        private void ExamButton_Click(object sender, EventArgs e)
+        private void CommonContextMenu_Click(object sender, EventArgs e)
         {
-            ShowContextMenu(ExamContextMenu, ExamButton, 2);
-        }
-
-        private void StudentButton_Click(object sender, EventArgs e)
-        {
-            ShowContextMenu(StudentContextMenu, StudentButton, 2);
-        }
-
-
-        private void ClassButton_Click(object sender, EventArgs e)
-        {
-            ShowContextMenu(ClassContextMenu, ClassButton, 2);
+            Guna2Button clickedButton = sender as Guna2Button;
+            Guna2ContextMenuStrip contextMenu = clickedButton?.Tag as Guna2ContextMenuStrip;
+            if (contextMenu != null && clickedButton != null)
+            {
+                ShowContextMenu(contextMenu, clickedButton);
+            }
         }
 
 
-        public void PanelControl(UserControl control, DockStyle style)
+        public void PanelControl(UserControl control, DockStyle style,int x,int y)
         {
             control.Dock = style;
 
             if (control.Name == "StudentEditUserControl")
-                control.Location = new Point(585, 160);
+                control.Location = new Point(x, y);
             else
                 MainPanel.Controls.Clear();
             MainPanel.Controls.Add(control);
@@ -100,13 +100,13 @@ namespace StudentGradingProgram
 
         private void sınıfEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PanelControl(new ClassUserControl(), DockStyle.Left);
+            PanelControl(new ClassUserControl(), DockStyle.Left, 0, 0);
         }
 
 
         private void öğrenciEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PanelControl(new StundetAddUserControl(), DockStyle.Left);
+            PanelControl(new StundetAddUserControl(), DockStyle.Left, 0, 0);
         }
 
 
@@ -114,7 +114,7 @@ namespace StudentGradingProgram
         {
             if (sideBarExpand)
                 SideBarHamburgerButton_Click(sender, e);
-            PanelControl(new StudentListUserControl(), DockStyle.Fill);
+            PanelControl(new StudentListUserControl(), DockStyle.Fill,0,0);
         }
 
 
@@ -141,13 +141,17 @@ namespace StudentGradingProgram
                         }
                     }
                 };
-                PanelControl(editUserControl, DockStyle.None);
+                PanelControl(editUserControl, DockStyle.None,585,106);
             }
         }
 
+
         private void sınavEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PanelControl(new ExamAddUserControll(), DockStyle.Fill);
+            if (sideBarExpand)
+                SideBarHamburgerButton_Click(sender, e);
+            PanelControl(new ExamScoreEntryUserControll(), DockStyle.Fill, 0, 0);
         }
+
     }
 }
