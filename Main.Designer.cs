@@ -238,19 +238,19 @@
             StudentContextMenu.RenderStyle.SelectionForeColor = Color.White;
             StudentContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             StudentContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            StudentContextMenu.Size = new Size(153, 48);
+            StudentContextMenu.Size = new Size(181, 70);
             // 
             // öğrenciEkleToolStripMenuItem
             // 
             öğrenciEkleToolStripMenuItem.Name = "öğrenciEkleToolStripMenuItem";
-            öğrenciEkleToolStripMenuItem.Size = new Size(152, 22);
+            öğrenciEkleToolStripMenuItem.Size = new Size(180, 22);
             öğrenciEkleToolStripMenuItem.Text = "Öğrenci Ekle";
             öğrenciEkleToolStripMenuItem.Click += öğrenciEkleToolStripMenuItem_Click;
             // 
             // öğrenciListeleToolStripMenuItem
             // 
             öğrenciListeleToolStripMenuItem.Name = "öğrenciListeleToolStripMenuItem";
-            öğrenciListeleToolStripMenuItem.Size = new Size(152, 22);
+            öğrenciListeleToolStripMenuItem.Size = new Size(180, 22);
             öğrenciListeleToolStripMenuItem.Text = "Öğrenci Listele";
             öğrenciListeleToolStripMenuItem.Click += öğrenciListeleToolStripMenuItem_Click;
             // 

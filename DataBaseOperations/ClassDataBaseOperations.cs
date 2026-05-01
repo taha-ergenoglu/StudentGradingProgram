@@ -18,7 +18,7 @@ namespace StudentGradingProgram.DataBaseOperations
                 var newClass = new Class
                 {
                     ClassName = className
-
+                    
                 };
                 context.Classes.Add(newClass);
                 context.SaveChanges();

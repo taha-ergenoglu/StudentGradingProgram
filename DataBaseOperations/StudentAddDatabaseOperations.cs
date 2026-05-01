@@ -22,6 +22,7 @@ namespace StudentGradingProgram.DataBaseOperations
                     {
                         Name = studentData.Name,
                         Surname = studentData.Surname,
+                        StudentNo=studentData.StundentNo,
                         ClassId = studentData.SelectedClassId
                     };
                     context.Students.Add(newStudent);
