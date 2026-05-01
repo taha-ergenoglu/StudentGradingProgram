@@ -49,6 +49,7 @@
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             StudentListDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
             FilterPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             FilterCancelButton = new Guna.UI2.WinForms.Guna2Button();
             FilterButton = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -60,14 +61,13 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel1.SuspendLayout();
             guna2ShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)StudentListDataGrid).BeginInit();
             FilterPanel.SuspendLayout();
+            guna2ShadowPanel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
-            guna2ShadowPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // guna2ShadowPanel1
@@ -168,10 +168,31 @@
             FilterPanel.Size = new Size(278, 860);
             FilterPanel.TabIndex = 0;
             // 
+            // guna2ShadowPanel2
+            // 
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(FilterCancelButton);
+            guna2ShadowPanel2.Controls.Add(FilterButton);
+            guna2ShadowPanel2.Controls.Add(guna2Panel1);
+            guna2ShadowPanel2.Controls.Add(SurnameTextBox);
+            guna2ShadowPanel2.Controls.Add(NameTextBox);
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel4);
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel3);
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel2);
+            guna2ShadowPanel2.FillColor = Color.White;
+            guna2ShadowPanel2.Location = new Point(7, 260);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.Radius = 5;
+            guna2ShadowPanel2.ShadowColor = Color.Black;
+            guna2ShadowPanel2.ShadowShift = 7;
+            guna2ShadowPanel2.Size = new Size(262, 217);
+            guna2ShadowPanel2.TabIndex = 19;
+            // 
             // FilterCancelButton
             // 
             FilterCancelButton.BorderRadius = 5;
             FilterCancelButton.BorderThickness = 1;
+            FilterCancelButton.Cursor = Cursors.Hand;
             FilterCancelButton.CustomizableEdges = customizableEdges1;
             FilterCancelButton.DisabledState.BorderColor = Color.DarkGray;
             FilterCancelButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -194,6 +215,7 @@
             // 
             FilterButton.BorderRadius = 5;
             FilterButton.BorderThickness = 1;
+            FilterButton.Cursor = Cursors.Hand;
             FilterButton.CustomizableEdges = customizableEdges3;
             FilterButton.DisabledState.BorderColor = Color.DarkGray;
             FilterButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -247,6 +269,7 @@
             ClassComboBox.BackColor = Color.Transparent;
             ClassComboBox.BorderColor = Color.FromArgb(213, 218, 223);
             ClassComboBox.BorderThickness = 0;
+            ClassComboBox.Cursor = Cursors.Hand;
             ClassComboBox.CustomizableEdges = customizableEdges6;
             ClassComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             ClassComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -266,6 +289,7 @@
             // SurnameTextBox
             // 
             SurnameTextBox.BorderRadius = 5;
+            SurnameTextBox.Cursor = Cursors.IBeam;
             SurnameTextBox.CustomizableEdges = customizableEdges10;
             SurnameTextBox.DefaultText = "";
             SurnameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -290,6 +314,7 @@
             // NameTextBox
             // 
             NameTextBox.BorderRadius = 5;
+            NameTextBox.Cursor = Cursors.IBeam;
             NameTextBox.CustomizableEdges = customizableEdges12;
             NameTextBox.DefaultText = "";
             NameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -354,26 +379,6 @@
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "Öğrenci Listele";
             // 
-            // guna2ShadowPanel2
-            // 
-            guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(FilterCancelButton);
-            guna2ShadowPanel2.Controls.Add(FilterButton);
-            guna2ShadowPanel2.Controls.Add(guna2Panel1);
-            guna2ShadowPanel2.Controls.Add(SurnameTextBox);
-            guna2ShadowPanel2.Controls.Add(NameTextBox);
-            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel4);
-            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel3);
-            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel2);
-            guna2ShadowPanel2.FillColor = Color.White;
-            guna2ShadowPanel2.Location = new Point(7, 260);
-            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            guna2ShadowPanel2.Radius = 5;
-            guna2ShadowPanel2.ShadowColor = Color.Black;
-            guna2ShadowPanel2.ShadowShift = 7;
-            guna2ShadowPanel2.Size = new Size(262, 217);
-            guna2ShadowPanel2.TabIndex = 19;
-            // 
             // StudentListUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -388,10 +393,10 @@
             ((System.ComponentModel.ISupportInitialize)StudentListDataGrid).EndInit();
             FilterPanel.ResumeLayout(false);
             FilterPanel.PerformLayout();
-            guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             guna2ShadowPanel2.ResumeLayout(false);
             guna2ShadowPanel2.PerformLayout();
+            guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             ResumeLayout(false);
         }
 

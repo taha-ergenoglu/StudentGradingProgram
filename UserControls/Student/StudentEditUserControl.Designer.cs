@@ -93,6 +93,7 @@
             guna2ShadowPanel1.Controls.Add(guna2HtmlLabel2);
             guna2ShadowPanel1.Controls.Add(guna2HtmlLabel1);
             guna2ShadowPanel1.Controls.Add(guna2PictureBox1);
+            guna2ShadowPanel1.Cursor = Cursors.Hand;
             guna2ShadowPanel1.FillColor = Color.White;
             guna2ShadowPanel1.Location = new Point(101, 48);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
@@ -128,6 +129,7 @@
             // 
             SaveButton.BorderRadius = 5;
             SaveButton.BorderThickness = 1;
+            SaveButton.Cursor = Cursors.Hand;
             SaveButton.CustomizableEdges = customizableEdges3;
             SaveButton.DisabledState.BorderColor = Color.DarkGray;
             SaveButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -200,6 +202,7 @@
             // SurnameTextBox
             // 
             SurnameTextBox.BorderRadius = 5;
+            SurnameTextBox.Cursor = Cursors.IBeam;
             SurnameTextBox.CustomizableEdges = customizableEdges10;
             SurnameTextBox.DefaultText = "";
             SurnameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -224,6 +227,7 @@
             // NameTextBox
             // 
             NameTextBox.BorderRadius = 5;
+            NameTextBox.Cursor = Cursors.IBeam;
             NameTextBox.CustomizableEdges = customizableEdges12;
             NameTextBox.DefaultText = "";
             NameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);

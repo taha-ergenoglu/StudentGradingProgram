@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentGradingProgram.Model;
 
@@ -10,9 +11,11 @@ using StudentGradingProgram.Model;
 namespace StudentGradingProgram.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260425183044_Tarih_column_was_changed_to_ExamDate_from_Exam")]
+    partial class Tarih_column_was_changed_to_ExamDate_from_Exam
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.25");
@@ -71,9 +74,6 @@ namespace StudentGradingProgram.Migrations
                     b.Property<decimal?>("Score4")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal?>("Score5")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("StudentID")
                         .HasColumnType("INTEGER");
 
@@ -89,42 +89,6 @@ namespace StudentGradingProgram.Migrations
                     b.ToTable("ExamScores");
                 });
 
-            modelBuilder.Entity("StudentGradingProgram.Model.ExamTableColumnsHeading", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ExamId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Header1Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Header2Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Header3Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Header4Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Header5Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ExamId");
-
-                    b.ToTable("ExamTableColumnsHeadings");
-                });
-
             modelBuilder.Entity("StudentGradingProgram.Model.Student", b =>
                 {
                     b.Property<int>("Id")
@@ -137,9 +101,6 @@ namespace StudentGradingProgram.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("StudentNo")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Surname")
                         .IsRequired()
@@ -171,17 +132,6 @@ namespace StudentGradingProgram.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("StudentGradingProgram.Model.ExamTableColumnsHeading", b =>
-                {
-                    b.HasOne("StudentGradingProgram.Model.Exam", "Exam")
-                        .WithMany("ExamTableColumnsHeadings")
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Exam");
-                });
-
             modelBuilder.Entity("StudentGradingProgram.Model.Student", b =>
                 {
                     b.HasOne("StudentGradingProgram.Model.Class", "Class")
@@ -201,8 +151,6 @@ namespace StudentGradingProgram.Migrations
             modelBuilder.Entity("StudentGradingProgram.Model.Exam", b =>
                 {
                     b.Navigation("ExamScores");
-
-                    b.Navigation("ExamTableColumnsHeadings");
                 });
 
             modelBuilder.Entity("StudentGradingProgram.Model.Student", b =>

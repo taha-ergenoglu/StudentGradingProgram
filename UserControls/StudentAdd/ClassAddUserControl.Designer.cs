@@ -153,6 +153,7 @@
             // 
             // ApproveButton
             // 
+            ApproveButton.Cursor = Cursors.Hand;
             ApproveButton.DisabledState.BorderColor = Color.DarkGray;
             ApproveButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ApproveButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -190,6 +191,7 @@
             // ClassTextBox
             // 
             ClassTextBox.BorderRadius = 5;
+            ClassTextBox.Cursor = Cursors.IBeam;
             ClassTextBox.CustomizableEdges = customizableEdges2;
             ClassTextBox.DefaultText = "";
             ClassTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);

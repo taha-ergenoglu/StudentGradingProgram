@@ -10,11 +10,10 @@ namespace StudentGradingProgram.Model
     internal class AppDbContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
-
         public DbSet<Class> Classes { get; set; }
         public DbSet<Exam> Exams { get; set; }
         public DbSet<ExamScore> ExamScores{ get; set; }
-
+        public DbSet<ExamTableColumnsHeading> ExamTableColumnsHeadings { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Programın çalıştığı dizinde (bin/Debug veya uygulamanın kurulu olduğu yer)

@@ -10,7 +10,8 @@ namespace StudentGradingProgram.Model
     {
         public int Id { get; set; }
         public string ExamName { get; set; }
-        public DateTime Tarih { get; set; }
+        public DateTime ExamDate { get; set; }
         public ICollection<ExamScore> ExamScores{ get; set; }
+        public ICollection<ExamTableColumnsHeading> ExamTableColumnsHeadings { get; set; }
     }
 }

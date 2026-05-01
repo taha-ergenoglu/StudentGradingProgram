@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentGradingProgram.Model;
 
@@ -10,9 +11,11 @@ using StudentGradingProgram.Model;
 namespace StudentGradingProgram.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260427194323_ExamTableColumnsHeading_added")]
+    partial class ExamTableColumnsHeading_added
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.25");
@@ -98,25 +101,20 @@ namespace StudentGradingProgram.Migrations
                     b.Property<int>("ExamId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Header1Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Header1Name")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Header2Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Header2Name")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Header3Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Header3Name")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Header4Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Header4Name")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Header5Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Header5Name")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -137,9 +135,6 @@ namespace StudentGradingProgram.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("StudentNo")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Surname")
                         .IsRequired()

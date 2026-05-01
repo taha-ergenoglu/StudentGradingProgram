@@ -68,6 +68,7 @@
             StudentButton.BorderColor = Color.FromArgb(73, 80, 87);
             StudentButton.BorderRadius = 8;
             StudentButton.BorderThickness = 1;
+            StudentButton.Cursor = Cursors.Hand;
             StudentButton.CustomizableEdges = customizableEdges1;
             StudentButton.DisabledState.BorderColor = Color.DarkGray;
             StudentButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -87,7 +88,7 @@
             StudentButton.TabIndex = 1;
             StudentButton.Text = "Öğrenci İşlemleri";
             StudentButton.TextAlign = HorizontalAlignment.Left;
-            StudentButton.Click += StudentButton_Click;
+            StudentButton.Click += CommonContextMenu_Click;
             // 
             // ExamButton
             // 
@@ -96,6 +97,7 @@
             ExamButton.BorderColor = Color.FromArgb(73, 80, 87);
             ExamButton.BorderRadius = 8;
             ExamButton.BorderThickness = 1;
+            ExamButton.Cursor = Cursors.Hand;
             ExamButton.CustomizableEdges = customizableEdges3;
             ExamButton.DisabledState.BorderColor = Color.DarkGray;
             ExamButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -116,7 +118,7 @@
             ExamButton.TabIndex = 0;
             ExamButton.Text = "Sınav İşlemleri";
             ExamButton.TextAlign = HorizontalAlignment.Left;
-            ExamButton.Click += ExamButton_Click;
+            ExamButton.Click += CommonContextMenu_Click;
             // 
             // panelSideMenu
             // 
@@ -142,6 +144,7 @@
             ClassButton.BorderColor = Color.FromArgb(73, 80, 87);
             ClassButton.BorderRadius = 8;
             ClassButton.BorderThickness = 1;
+            ClassButton.Cursor = Cursors.Hand;
             ClassButton.CustomizableEdges = customizableEdges5;
             ClassButton.DisabledState.BorderColor = Color.DarkGray;
             ClassButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -161,12 +164,13 @@
             ClassButton.TabIndex = 3;
             ClassButton.Text = "Sınıf İşlemleri";
             ClassButton.TextAlign = HorizontalAlignment.Left;
-            ClassButton.Click += ClassButton_Click;
+            ClassButton.Click += CommonContextMenu_Click;
             // 
             // SideBarHamburgerButton
             // 
             SideBarHamburgerButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             SideBarHamburgerButton.CheckedState.ImageSize = new Size(64, 64);
+            SideBarHamburgerButton.Cursor = Cursors.Hand;
             SideBarHamburgerButton.HoverState.ImageSize = new Size(27, 27);
             SideBarHamburgerButton.Image = (Image)resources.GetObject("SideBarHamburgerButton.Image");
             SideBarHamburgerButton.ImageOffset = new Point(0, 0);
@@ -211,13 +215,13 @@
             ExamContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             ExamContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             ExamContextMenu.Size = new Size(155, 48);
-            ExamContextMenu.UseWaitCursor = true;
             // 
             // sınavEkleToolStripMenuItem
             // 
             sınavEkleToolStripMenuItem.Name = "sınavEkleToolStripMenuItem";
             sınavEkleToolStripMenuItem.Size = new Size(154, 22);
             sınavEkleToolStripMenuItem.Text = "Sınav Ekle";
+            sınavEkleToolStripMenuItem.Click += sınavEkleToolStripMenuItem_Click;
             // 
             // sınavlarıListeleToolStripMenuItem
             // 
@@ -290,7 +294,7 @@
             ClientSize = new Size(1379, 860);
             Controls.Add(MainPanel);
             Controls.Add(panelSideMenu);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Main";
             Text = "Main";
             panelSideMenu.ResumeLayout(false);
