@@ -9,10 +9,11 @@ namespace StudentGradingProgram.UserControls.StudentAdd
 {
     public class StudentData
     {
-       
-            public string Name { get; set; }
-            public string Surname { get; set; }
-        public int StundentNo{ get; set; }
+        
+
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int StundentNo { get; set; }
         public int SelectedClassId { get; set; }
     }
 }
