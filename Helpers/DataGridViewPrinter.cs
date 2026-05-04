@@ -107,7 +107,7 @@ namespace StudentGradingProgram.Helpers
             //-----------------------------------------------------------
             //Sınıf, Sınav Tarihi, Yazdırma Tarihi
             //-----------------------------------------------------------
-            string bilgiMetni = $"Sınav: {_examName}      |      Sınav Tarihi: {_examDate.ToString("dd.MM.yyyy")}      |      Yazdırılma Tarihi: {DateTime.Now.ToString("dd.MM.yyyy HH:mm")}";
+            string bilgiMetni = $"Sınav: {_examName}      |      Sınıf: {_className}      |      Sınav Tarihi: {_examDate.ToString("dd.MM.yyyy")}      |      Yazdırılma Tarihi: {DateTime.Now.ToString("dd.MM.yyyy")}";
 
             StringFormat bilgiFormat = new StringFormat { Alignment = StringAlignment.Center };
             Rectangle bilgiAlani = new Rectangle(x, y, e.MarginBounds.Width + 65, 30);
@@ -135,24 +135,25 @@ namespace StudentGradingProgram.Helpers
             };
 
             // Genişlik Hesaplama (İlk 4 sabit, son 5 dinamik)
-            int[] fixedWidths = { 40, 120, 120, 80 };
-            int totalFixedWidth = 40 + 120 + 120 + 80;
-            int remainingWidth = e.MarginBounds.Width + 70 - totalFixedWidth;
+            int[] fixedWidths = { 40, 120, 120,80,80};
+            int totalFixedWidth = 40 + 120 + 120;
+            int remainingWidth = e.MarginBounds.Width + 50 - totalFixedWidth;
             int dynamicColumnWidth = remainingWidth / 5;
 
-            int[] colWidths = { fixedWidths[0], fixedWidths[1], fixedWidths[2], fixedWidths[3],
+            int[] colWidths = { fixedWidths[0], fixedWidths[1], fixedWidths[2],fixedWidths[3],fixedWidths[4],
                                 dynamicColumnWidth, dynamicColumnWidth, dynamicColumnWidth, dynamicColumnWidth, dynamicColumnWidth };
 
             // 1. BAŞLIKLARI ÇİZ
             for (int i = 0; i < _dataGrid.Columns.Count; i++)
             {
-                if (_dataGrid.Columns[i].Name != "Id")
+                if (_dataGrid.Columns[i].HeaderText != "Id" && _dataGrid.Columns[i].HeaderText != "ClassName")
                 {
                     Rectangle rect = new Rectangle(x, y, colWidths[i], headerHeight);
                     g.DrawRectangle(pen, rect);
                     g.DrawString(_dataGrid.Columns[i].HeaderText, headerFont, brush, rect, format);
                     x += colWidths[i];
                 }
+                
             }
 
             y += headerHeight;
@@ -167,7 +168,7 @@ namespace StudentGradingProgram.Helpers
 
                 for (int i = 0; i < _dataGrid.Columns.Count; i++)
                 {
-                    if (_dataGrid.Columns[i].Name != "Id")
+                    if (_dataGrid.Columns[i].Name != "Id" && _dataGrid.Columns[i].HeaderText != "ClassName")
                     {
                         Rectangle rect = new Rectangle(x, y, colWidths[i], cellHeight);
                         g.DrawRectangle(pen, rect);

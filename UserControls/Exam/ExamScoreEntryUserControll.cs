@@ -34,6 +34,7 @@ namespace StudentGradingProgram.UserControls.Exam
 
         private void ClassComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ExamDataGrid.Columns.Clear();
             if (ClassComboBox.SelectedIndex != 0 && int.TryParse(ClassComboBox.SelectedValue.ToString(), out int selectedClassId))
             {
                 var sinifOgrencileri = dbOperations.GetStudentsByClassId(selectedClassId);

@@ -135,8 +135,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(71, 69, 94);
             ExamDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            ExamDataGrid.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            ExamDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            ExamDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -155,6 +154,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             ExamDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            ExamDataGrid.Dock = DockStyle.Fill;
             ExamDataGrid.GridColor = Color.FromArgb(231, 229, 255);
             ExamDataGrid.Location = new Point(25, 25);
             ExamDataGrid.Margin = new Padding(10, 3, 3, 3);
@@ -311,6 +311,7 @@
             Evaluation5TextBox.IconLeft = (Image)resources.GetObject("Evaluation5TextBox.IconLeft");
             Evaluation5TextBox.Location = new Point(870, 137);
             Evaluation5TextBox.Margin = new Padding(10, 3, 3, 3);
+            Evaluation5TextBox.MaxLength = 95;
             Evaluation5TextBox.Name = "Evaluation5TextBox";
             Evaluation5TextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             Evaluation5TextBox.PlaceholderText = "Değerlendirme 5";
@@ -337,6 +338,7 @@
             Evaluation4TextBox.IconLeft = (Image)resources.GetObject("Evaluation4TextBox.IconLeft");
             Evaluation4TextBox.Location = new Point(655, 137);
             Evaluation4TextBox.Margin = new Padding(10, 3, 3, 3);
+            Evaluation4TextBox.MaxLength = 95;
             Evaluation4TextBox.Name = "Evaluation4TextBox";
             Evaluation4TextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             Evaluation4TextBox.PlaceholderText = "Değerlendirme 4";
@@ -363,6 +365,7 @@
             Evaluation3TextBox.IconLeft = (Image)resources.GetObject("Evaluation3TextBox.IconLeft");
             Evaluation3TextBox.Location = new Point(440, 137);
             Evaluation3TextBox.Margin = new Padding(10, 3, 3, 3);
+            Evaluation3TextBox.MaxLength = 95;
             Evaluation3TextBox.Name = "Evaluation3TextBox";
             Evaluation3TextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             Evaluation3TextBox.PlaceholderText = "Değerlendirme 3";
@@ -388,6 +391,7 @@
             Evaluation2TextBox.IconLeft = (Image)resources.GetObject("Evaluation2TextBox.IconLeft");
             Evaluation2TextBox.Location = new Point(225, 137);
             Evaluation2TextBox.Margin = new Padding(10, 3, 3, 3);
+            Evaluation2TextBox.MaxLength = 95;
             Evaluation2TextBox.Name = "Evaluation2TextBox";
             Evaluation2TextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             Evaluation2TextBox.PlaceholderText = "Değerlendirme 2";
@@ -425,6 +429,7 @@
             Evaluation1TextBox.IconLeft = (Image)resources.GetObject("Evaluation1TextBox.IconLeft");
             Evaluation1TextBox.Location = new Point(10, 137);
             Evaluation1TextBox.Margin = new Padding(10, 3, 3, 3);
+            Evaluation1TextBox.MaxLength = 95;
             Evaluation1TextBox.Name = "Evaluation1TextBox";
             Evaluation1TextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             Evaluation1TextBox.PlaceholderText = "Değerlendirme 1";
@@ -518,6 +523,7 @@
             ExamNameTextBox.IconLeft = (Image)resources.GetObject("ExamNameTextBox.IconLeft");
             ExamNameTextBox.Location = new Point(440, 52);
             ExamNameTextBox.Margin = new Padding(10, 3, 3, 3);
+            ExamNameTextBox.MaxLength = 45;
             ExamNameTextBox.Name = "ExamNameTextBox";
             ExamNameTextBox.PlaceholderForeColor = Color.FromArgb(173, 181, 189);
             ExamNameTextBox.PlaceholderText = "Sınav Adı";

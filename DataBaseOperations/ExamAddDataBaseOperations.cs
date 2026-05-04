@@ -30,6 +30,7 @@ namespace StudentGradingProgram.DataBaseOperations
                                 Id = student.Id,
                                 Name = student.Name,
                                 Surname = student.Surname,
+                                No=student.StudentNo,
                                 ClassName = student.Class.ClassName
 
                             }).ToList();

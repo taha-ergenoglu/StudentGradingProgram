@@ -17,7 +17,7 @@ namespace StudentGradingProgram.Helpers
             dataGrid.DataSource = dataList;
             foreach (DataGridViewColumn col in dataGrid.Columns)
             {
-                if (col.Name == "Id"||col.Name=="ClassId")
+                if (col.Name == "Id"||col.Name=="ClassId"||col.Name=="ClassName")
                     dataGrid.Columns[col.Name].Visible = false;
                 else if (col.Name == "ClassName")
                     dataGrid.Columns["ClassName"].HeaderText = "Class Name";
@@ -128,7 +128,7 @@ namespace StudentGradingProgram.Helpers
 
         public void ChangeDataGridColumnsHeader(Guna2DataGridView dataGrid, List<string> headNames)
         {
-            int i = 4;
+            int i = 5;
             foreach (string headerName in headNames)
             {
 
