@@ -98,7 +98,7 @@
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 5;
             guna2ShadowPanel2.ShadowColor = Color.Black;
-            guna2ShadowPanel2.Size = new Size(230, 494);
+            guna2ShadowPanel2.Size = new Size(230, 506);
             guna2ShadowPanel2.TabIndex = 10;
             // 
             // StudentNumberTextBox
