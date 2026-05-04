@@ -11,6 +11,7 @@ namespace StudentGradingProgram.UserControls.StudentAdd
     {
         
 
+
         public string Name { get; set; }
         public string Surname { get; set; }
         public int StundentNo { get; set; }
