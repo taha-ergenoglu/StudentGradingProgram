@@ -162,7 +162,7 @@
             ApproveButton.ForeColor = Color.White;
             ApproveButton.Image = (Image)resources.GetObject("ApproveButton.Image");
             ApproveButton.ImageSize = new Size(30, 30);
-            ApproveButton.Location = new Point(291, 249);
+            ApproveButton.Location = new Point(305, 249);
             ApproveButton.Name = "ApproveButton";
             ApproveButton.ShadowDecoration.CustomizableEdges = customizableEdges1;
             ApproveButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;

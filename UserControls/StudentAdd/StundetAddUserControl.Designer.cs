@@ -148,7 +148,7 @@
             StudentSaveButton.FillColor = Color.Silver;
             StudentSaveButton.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
             StudentSaveButton.ForeColor = Color.Black;
-            StudentSaveButton.Location = new Point(7, 438);
+            StudentSaveButton.Location = new Point(9, 450);
             StudentSaveButton.Margin = new Padding(15);
             StudentSaveButton.Name = "StudentSaveButton";
             StudentSaveButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
