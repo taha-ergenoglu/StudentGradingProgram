@@ -100,7 +100,7 @@ namespace StudentGradingProgram
 
         private void sınıfEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PanelControl(new ClassUserControl(), DockStyle.Left, 0, 0);
+            PanelControl(new ClassAddUserControl(), DockStyle.Left, 0, 0);
         }
 
 

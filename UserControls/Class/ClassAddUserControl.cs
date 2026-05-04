@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace StudentGradingProgram
 {
-    public partial class ClassUserControl : UserControl
+    public partial class ClassAddUserControl : UserControl
     {
-        public ClassUserControl()
+        public ClassAddUserControl()
         {
             InitializeComponent();
         }

@@ -17,8 +17,8 @@ namespace StudentGradingProgram.Helpers
             dataGrid.DataSource = dataList;
             foreach (DataGridViewColumn col in dataGrid.Columns)
             {
-                if (col.Name == "Id")
-                    dataGrid.Columns["Id"].Visible = false;
+                if (col.Name == "Id"||col.Name=="ClassId")
+                    dataGrid.Columns[col.Name].Visible = false;
                 else if (col.Name == "ClassName")
                     dataGrid.Columns["ClassName"].HeaderText = "Class Name";
             }

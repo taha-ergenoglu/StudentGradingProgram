@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentGradingProgram.UserControls.StudentAdd
+namespace StudentGradingProgram.UserControls.Student
 {
     public class StudentData
     {
-       
-            public string Name { get; set; }
-            public string Surname { get; set; }
-            public int SelectedClassId { get; set; }
+        
+
+
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int StundentNo { get; set; }
+        public int SelectedClassId { get; set; }
     }
 }

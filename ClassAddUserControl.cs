@@ -65,7 +65,7 @@ namespace StudentGradingProgram
 
         private void FillDataGrid()
         {
-            dbOperations.ClassList(ClassDataGrid);
+            ClassDataGrid.DataSource= dbOperations.ClassList();
             ClassDataGrid.Columns["Students"].Visible = false;
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace StudentGradingProgram
 {
-    partial class ClassUserControl
+    partial class ClassAddUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassAddUserControl));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -160,6 +161,7 @@
             ApproveButton.FillColor = Color.Transparent;
             ApproveButton.Font = new Font("Segoe UI", 9F);
             ApproveButton.ForeColor = Color.White;
+            ApproveButton.Image = (Image)resources.GetObject("ApproveButton.Image");
             ApproveButton.ImageSize = new Size(30, 30);
             ApproveButton.Location = new Point(291, 249);
             ApproveButton.Name = "ApproveButton";
@@ -208,13 +210,13 @@
             ClassTextBox.Size = new Size(166, 36);
             ClassTextBox.TabIndex = 6;
             // 
-            // ClassUserControl
+            // ClassAddUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(ClassShadowPanel);
-            Name = "ClassUserControl";
+            Name = "ClassAddUserControl";
             Size = new Size(348, 316);
             Load += ClassUserControl_Load;
             ((System.ComponentModel.ISupportInitialize)ClassDataGrid).EndInit();

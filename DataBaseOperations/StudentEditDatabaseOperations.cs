@@ -28,6 +28,7 @@ namespace StudentGradingProgram.DataBaseOperations
                                 Id = student.Id,
                                 Name = student.Name,
                                 Surname = student.Surname,
+                                Number=student.StudentNo,
                                 ClassId = student.ClassId,
                                 ClassName = student.Class.ClassName
                             }).FirstOrDefault();
@@ -42,7 +43,7 @@ namespace StudentGradingProgram.DataBaseOperations
         }
 
 
-        public bool StudentUpdate(int studentId, string newName, string newSurname, int newClassId)
+        public bool StudentUpdate(int studentId, string newName, string newSurname,int newNumber, int newClassId)
         {
             using (var context = new AppDbContext())
             {
@@ -52,6 +53,7 @@ namespace StudentGradingProgram.DataBaseOperations
                 {
                     student.Name = newName;
                     student.Surname = newSurname;
+                    student.StudentNo = newNumber;
                     student.ClassId = newClassId;
                     context.SaveChanges();
                     return true;

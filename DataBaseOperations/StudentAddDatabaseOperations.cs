@@ -1,7 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using StudentGradingProgram.Model;
 using StudentGradingProgram.UserControls;
-using StudentGradingProgram.UserControls.StudentAdd;
+using StudentGradingProgram.UserControls.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;

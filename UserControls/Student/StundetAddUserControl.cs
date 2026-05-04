@@ -1,5 +1,4 @@
 ﻿using StudentGradingProgram.DataBaseOperations;
-using StudentGradingProgram.UserControls.StudentAdd;
 using StudentGradingProgram.Helpers;
 using System;
 using System.Collections.Generic;
@@ -10,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudentGradingProgram.UserControls.Student;
 
 namespace StudentGradingProgram.UserControls
 {
@@ -30,6 +30,7 @@ namespace StudentGradingProgram.UserControls
             var student = new StudentData();
             student.Name = NameTextBox.Text;
             student.Surname = SurnameTextBox.Text;
+            student.StundentNo = Convert.ToInt32( StudentNumberTextBox.Text);
             student.SelectedClassId = Convert.ToInt16(ClassComboBox.SelectedValue);
             if (!string.IsNullOrEmpty(student.Name) && !string.IsNullOrEmpty(student.Surname) && student.SelectedClassId != 0)
             {

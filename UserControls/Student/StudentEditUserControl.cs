@@ -21,7 +21,6 @@ namespace StudentGradingProgram.UserControls.Student
         public event EventHandler IslemBitti;
 
         StudentEditDatabaseOperations dbOperations = new StudentEditDatabaseOperations();
-        StudentListUserControl studentListUser = new StudentListUserControl();
 
         public int StudentID { get; set; }
 
@@ -42,6 +41,7 @@ namespace StudentGradingProgram.UserControls.Student
             {
                 NameTextBox.Text = findedStudent.Name;
                 SurnameTextBox.Text = findedStudent.Surname;
+                StudentNumberTextBox.Text = findedStudent.Number.ToString();
                 LoadComboBox(findedStudent.ClassId);
             }
         }
@@ -51,9 +51,10 @@ namespace StudentGradingProgram.UserControls.Student
         {
             string newName = NameTextBox.Text;
             string newSurname = SurnameTextBox.Text;
+            int newStudentNumber =Convert.ToInt32( StudentNumberTextBox.Text);
             int newClassId = Convert.ToInt16(ClassComboBox.SelectedValue);
 
-            bool operationResult = dbOperations.StudentUpdate(StudentID, newName, newSurname, newClassId);
+            bool operationResult = dbOperations.StudentUpdate(StudentID, newName, newSurname, newStudentNumber, newClassId);
             if (operationResult)
             {
                 MessageBox.Show("İşlem başarılı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -67,5 +68,7 @@ namespace StudentGradingProgram.UserControls.Student
         {
             IslemBitti?.Invoke(this, EventArgs.Empty);
         }
+
+       
     }
 }
