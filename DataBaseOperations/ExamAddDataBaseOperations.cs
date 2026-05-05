@@ -44,7 +44,7 @@ namespace StudentGradingProgram.DataBaseOperations
             }
         }
 
-        public int SaveClassScore(List<ExamScore> allScores,string examName,DateTime examDate,List<string>examHeadNames)//Buradaki examHeadNames kullanıcının "Değerlendirme1,...,5" kısımlarına girdiği ifadeleri belirtir
+        public int SaveClassScore(List<ExamScore> allScores,string examName,int classId,DateTime examDate,List<string>examHeadNames)//Buradaki examHeadNames kullanıcının "Değerlendirme1,...,5" kısımlarına girdiği ifadeleri belirtir
         {
             try
             {
@@ -53,6 +53,7 @@ namespace StudentGradingProgram.DataBaseOperations
                     var newExam = new Exam
                     {
                         ExamName = examName,
+                        ClassId=classId,
                         ExamDate = examDate.Date
                     };
                     context.Exams.Add(newExam);

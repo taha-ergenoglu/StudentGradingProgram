@@ -77,7 +77,8 @@ namespace StudentGradingProgram.UserControls.Exam
             {
                 string examName = ExamNameTextBox.Text;
                 DateTime examDate = ExamDateDateTimePicker.Value;
-                int examId = dbOperations.SaveClassScore(scoreList, examName, examDate, columnsName);
+                int selectedClassId = Convert.ToInt32(ClassComboBox.SelectedValue);
+                int examId = dbOperations.SaveClassScore(scoreList, examName,selectedClassId, examDate, columnsName);
                 bool isItSccessfull = dbOperations.SaveExamHeadings(examId, ExamDataGrid);
                 if (isItSccessfull)
                 {

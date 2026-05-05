@@ -135,7 +135,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(71, 69, 94);
             ExamDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            ExamDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            ExamDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
