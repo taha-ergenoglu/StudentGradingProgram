@@ -84,7 +84,7 @@ namespace StudentGradingProgram
         }
 
 
-        public void PanelControl(UserControl control, DockStyle style,int x,int y)
+        public void PanelControl(UserControl control, DockStyle style, int x, int y)
         {
             control.Dock = style;
 
@@ -114,7 +114,7 @@ namespace StudentGradingProgram
         {
             if (sideBarExpand)
                 SideBarHamburgerButton_Click(sender, e);
-            PanelControl(new StudentListUserControl(), DockStyle.Fill,0,0);
+            PanelControl(new StudentListUserControl(), DockStyle.Fill, 0, 0);
         }
 
 
@@ -141,8 +141,14 @@ namespace StudentGradingProgram
                         }
                     }
                 };
-                PanelControl(editUserControl, DockStyle.None,585,106);
+                PanelControl(editUserControl, DockStyle.None, 585, 106);
             }
+        }
+
+
+        public void ShowSelectedExam(int selectedExamId)
+        {
+            PanelControl(new ExamEditDeleteUserControl(), DockStyle.Fill, 0, 0);
         }
 
 
@@ -153,5 +159,11 @@ namespace StudentGradingProgram
             PanelControl(new ExamScoreEntryUserControll(), DockStyle.Fill, 0, 0);
         }
 
+        private void sınavlarıListeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (sideBarExpand)
+                SideBarHamburgerButton_Click(sender, e);
+            PanelControl(new ExamListUserControl(), DockStyle.Fill, 0, 0);
+        }
     }
 }

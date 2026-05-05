@@ -214,20 +214,21 @@
             ExamContextMenu.RenderStyle.SelectionForeColor = Color.White;
             ExamContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             ExamContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            ExamContextMenu.Size = new Size(155, 48);
+            ExamContextMenu.Size = new Size(181, 70);
             // 
             // sınavEkleToolStripMenuItem
             // 
             sınavEkleToolStripMenuItem.Name = "sınavEkleToolStripMenuItem";
-            sınavEkleToolStripMenuItem.Size = new Size(154, 22);
+            sınavEkleToolStripMenuItem.Size = new Size(180, 22);
             sınavEkleToolStripMenuItem.Text = "Sınav Ekle";
             sınavEkleToolStripMenuItem.Click += sınavEkleToolStripMenuItem_Click;
             // 
             // sınavlarıListeleToolStripMenuItem
             // 
             sınavlarıListeleToolStripMenuItem.Name = "sınavlarıListeleToolStripMenuItem";
-            sınavlarıListeleToolStripMenuItem.Size = new Size(154, 22);
+            sınavlarıListeleToolStripMenuItem.Size = new Size(180, 22);
             sınavlarıListeleToolStripMenuItem.Text = "Sınavları Listele";
+            sınavlarıListeleToolStripMenuItem.Click += sınavlarıListeleToolStripMenuItem_Click;
             // 
             // StudentContextMenu
             // 
@@ -242,19 +243,19 @@
             StudentContextMenu.RenderStyle.SelectionForeColor = Color.White;
             StudentContextMenu.RenderStyle.SeparatorColor = Color.Gainsboro;
             StudentContextMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            StudentContextMenu.Size = new Size(181, 70);
+            StudentContextMenu.Size = new Size(153, 48);
             // 
             // öğrenciEkleToolStripMenuItem
             // 
             öğrenciEkleToolStripMenuItem.Name = "öğrenciEkleToolStripMenuItem";
-            öğrenciEkleToolStripMenuItem.Size = new Size(180, 22);
+            öğrenciEkleToolStripMenuItem.Size = new Size(152, 22);
             öğrenciEkleToolStripMenuItem.Text = "Öğrenci Ekle";
             öğrenciEkleToolStripMenuItem.Click += öğrenciEkleToolStripMenuItem_Click;
             // 
             // öğrenciListeleToolStripMenuItem
             // 
             öğrenciListeleToolStripMenuItem.Name = "öğrenciListeleToolStripMenuItem";
-            öğrenciListeleToolStripMenuItem.Size = new Size(180, 22);
+            öğrenciListeleToolStripMenuItem.Size = new Size(152, 22);
             öğrenciListeleToolStripMenuItem.Text = "Öğrenci Listele";
             öğrenciListeleToolStripMenuItem.Click += öğrenciListeleToolStripMenuItem_Click;
             // 

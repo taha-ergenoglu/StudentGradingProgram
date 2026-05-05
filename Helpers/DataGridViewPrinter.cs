@@ -146,7 +146,7 @@ namespace StudentGradingProgram.Helpers
             // 1. BAŞLIKLARI ÇİZ
             for (int i = 0; i < _dataGrid.Columns.Count; i++)
             {
-                if (_dataGrid.Columns[i].HeaderText != "Id" && _dataGrid.Columns[i].HeaderText != "ClassName")
+                if (_dataGrid.Columns[i].HeaderText != "Id" && _dataGrid.Columns[i].HeaderText != "Class Name")
                 {
                     Rectangle rect = new Rectangle(x, y, colWidths[i], headerHeight);
                     g.DrawRectangle(pen, rect);
@@ -168,7 +168,7 @@ namespace StudentGradingProgram.Helpers
 
                 for (int i = 0; i < _dataGrid.Columns.Count; i++)
                 {
-                    if (_dataGrid.Columns[i].Name != "Id" && _dataGrid.Columns[i].HeaderText != "ClassName")
+                    if (_dataGrid.Columns[i].Name != "Id" && _dataGrid.Columns[i].HeaderText != "Class Name")
                     {
                         Rectangle rect = new Rectangle(x, y, colWidths[i], cellHeight);
                         g.DrawRectangle(pen, rect);

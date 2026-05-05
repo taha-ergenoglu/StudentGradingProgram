@@ -29,6 +29,7 @@ namespace StudentGradingProgram.UserControls.Exam
 
         private void ExamAddUserControll_Load(object sender, EventArgs e)
         {
+            ExamDateDateTimePicker.Value = DateTime.Now;
             interfaceTools.LoadComboBox(ClassComboBox, () => dbOperations.ClassList());
         }
 
@@ -77,7 +78,8 @@ namespace StudentGradingProgram.UserControls.Exam
             {
                 string examName = ExamNameTextBox.Text;
                 DateTime examDate = ExamDateDateTimePicker.Value;
-                int examId = dbOperations.SaveClassScore(scoreList, examName, examDate, columnsName);
+                int selectedClassId = Convert.ToInt32(ClassComboBox.SelectedValue);
+                int examId = dbOperations.SaveClassScore(scoreList, examName,selectedClassId, examDate, columnsName);
                 bool isItSccessfull = dbOperations.SaveExamHeadings(examId, ExamDataGrid);
                 if (isItSccessfull)
                 {
